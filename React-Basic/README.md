@@ -1,12 +1,28 @@
-## install React project
+# JSX_Extension
 
-Go to this React official Documentation([Link](https://react.dev/)) 
+jsx(java script XML) ai jsx syntax aa amra amader ReactJs ar code likhi...
 
-and click on the the Learn React button and then click on Installation dropdown after that click on Start a New React Project after that click on Can I use React without a framework? 
+amader protita ReactJs ar file ar sheshe .jsx extension likhi...
 
-and after that click on vite...there will be 2 options  ```Vite``` or ```Parcel``` this 2 are called bundler....among this 2 bundler we will use Vite....Vite will provide us a fresh structure of React project....
+jsx syntax ta hocche HTML ar moto dekhte kintu jsx HTML na....amra ai .jsx extension  ar karone amader javascript code ar moddhe HTML likhte pari and jokhon amara  .jsx file ar moddhe react module ke import kori jemon ```import React form 'react';```  tokhon amader  ai react module ar moddhe akta compiler ache ```bable``` name oi compiler ta amader HTML take javascript a convart kore nicche...
 
-after going to Vite official website click on the Get Started button..after clicking on the button we will see the vite installation command into the same page...there will be lots of options to install Vite by NPM,Yarn,PNPM and Bun ..among them we will chose NPM to install Vite..before installing Vite By NPM we have to install Node first..
 
-after set up a fresh React project by ```Vite``` bundler we will write all react code inside to the src folder/directory...and all images we will store into the public folder/directory...
+* amader .jsx file ar moddhe jokhon render korbo tokhon amader akta jinish mathai rakhte hobe ja amara amader .jsx file ar render ar moddhe akta element kei pass korte parbo jemon jodi ami ai akta element jemon ```<h1>hello</h1>```   likhi tahole amader render ai akta element take print korbe amader browser ar moddhe kintu jodi ami render ar moddhe 2 ta element ba tar theke beshi element likhi tahole amader oi render function ta amader browser ar moddhe oi ta print korbe na jemon jodi aivabe 2ta element likhi
+```<h1>hello</h1>```
+
+```<h2>hello</h2>```
+
+
+jodi amra render function ar moddhe 2ta element ba ar theke beshi element likhi tahole amader oobossoi oi element guloke ```<div></div>```  ba  ```<></>``` ar moddhe rakhte hobe tahole render function ta amader oi element guloke render korbe...
+
+Check src/main.jsx
+
+
+* jokhon amra .jsx file ar moddhe HTML ar moddhe kono JavaScript ar code likhbo ba javascript ar kono variable ar value ke print korbo tokhon amader {} ar  moddhe likhte hobe ....
+
+
+
+
+
+
 
