@@ -10,6 +10,9 @@
  and jodi amra amader ReactJs project ar src directory ar moddhe amader external CSS file ta create kori tahole  amader .html file ar moddhe amder oi external CSS file take link korano lagbe na kintu amader oi .html file ar sathe jei .jsx file ta add ache oi .jsx file ar moddhe giye amader src directory ar moddhe jei external CSS file ta amra add korechi oi file take amader .jsx file ar moddhe import kore dite hobe..
 
 
+ NOTE:  Amra muloto amader CSS file gulo amader ReactJs project ar public directory ar moddhe korbo...
+
+
 
 
 
