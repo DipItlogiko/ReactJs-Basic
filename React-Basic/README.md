@@ -1,31 +1,22 @@
-# Component (Functional Component)
+# Props and destructuring
 
-[Tutorial](https://www.youtube.com/watch?v=qgLZSNppJOU&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=10)
-
-
-* Component hocche kichu code jeitake amra oonek bar use korte pari... and amader akta component ar moddhe HTML,CSS and JavaScript ai 3 tai eee thakte pare....
-
-* ReactJs aaa Component 2 dhoroner 
-
-  1. Class Based Component( jei component ar moddhe amara amader state take hander korte pari)
-
-  2. Functional Component
+[Tutorial](https://www.youtube.com/watch?v=GQx58yfYqxo&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=11)
 
 
-jemon amader ai ReactJs project ar moddhe src/main.jsx ar moddhe amra akta card design korechi akhon doren ami chacchi amader ai card ta 20 bar lagbe shei khetre jodi amader ai card take ami 20 bar copy pest kori amader src/main.jsx ar moddhe tahole dekha jabe amader colde ta oonek boro hoye jabe and amader akta eee code bar bar repeated hocche to amra chacchi amader ai akta eeee code bar bar repeated na hok tar jonno amader Component ar proyojon hobe...
 
-amra chaile akta Component create korte pari and amder ai card  ar code take amader Component ar moddhe rakhte pari and ai Component ke ami joto bar khushi use korte pari.....jar fole amader code ta  oonek simplify hobe and bar bar ak eee line amader likhte hobe na.just akbar amra Component create korbo and oi component ke ami joto bar khushi call kore kore use korte parbo....
+## Props
 
-Check (src/main.jsx)
+jokhon amra kono component ke call kori tokhon amara chaile oi component ar moddhe data pass kore dite pari jemon ```<Card title="Home" desc="this is the description" /> ``` akhne ami jemon title key and desc key ar moddhe data pathiyechi and amader ai key gulo amader component received korbe Props aakare mane Props   ar moddhe amder ai data gulo chole jabe component ar kache and component ai key guloke and ai key ar value guloke props ar moddhe received korbe tai amra amader jei component ke call kore or moddhe data pathacchi oi component ar moddhe giye amder oi component ar () paranthesis ar moddhe amader props ta likhe dite hobe jemon ```function Card(props)```  ai props ar moddhe amader oi data gulo chole ashbe jei dataguloke ami amader component ke call korar somoy  pass kore dicchilam 
 
 
-* **Component Structure**
+Check(src/components/Card.jsx  and src/App.jsx)
 
- 1. amader ReactJs project ar moddhe jei **src** directory ta ache oi directory ar moddhe amra amader application ar  component gulo rakhar jonno akta components directory create korbo amader **src** directory ar moddhe..jei khane amader application ar sob component gulo thakbe... 
 
- 2. amra amader ReactJs Project ar moddhe jei **src** directory ta ache oi directory ar moddhe amra App.jsx ba jekono name akta component create korbo aita hote pare functional component ba class based component...and ai App.jsx ar moddhe amader sob component load korate hobe amader proyojon ooonujayi...then amader ai component ar nam take export kore dite hobe amader ai App.jsx file ar akebare niche theke..
+## Destructuring
 
- 3. amader index.jsx/main.jsx file ta sob somoy simple thakbe, karon amader App.jsx file ar moddhe amader proyojon oonujayi component load kore then oi file theke oi component ke export kore dewar pore finally amader index.jsx/main.jsx ar moddhe ashe amader App.jsx file take index.jsx/main.jsx ar moddhe import kore niye amader App component take render kore debo 
+Destructuring mane hocche kono akta jinish ke venge lekha...muloto amra ai Destructuring ta kori props ar khetre mane amader props ar moddhe jei data gulo ashe oi data guloke ami props ar moddhe theke venge likhte pari...
 
-  
 
+jodi amader props ar moddhe object aakare data ashe tahole amader oi props ar data take { } curly bracis diye Destructuring korte hobe .....and jodi amader props ar moddhe array aakare data ashe tahole amader oi props ar data take [ ] diye Destructuring korte hobe....
+
+Check(src/components/Card.jsx and src/App.jsx)
