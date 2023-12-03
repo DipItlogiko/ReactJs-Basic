@@ -1,11 +1,8 @@
-# Mapping data to components
+# Mapping data with an unique id
 
-[tutorial](https://www.youtube.com/watch?v=OwwmIzH7FzI&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=12)
-
-
-jokhon kono json data ke, amader  component ke call kore oi component ar moddhe amader json data ke pass korbo tokhon amra  Mapping use korbo....
+[Tutorial](https://www.youtube.com/watch?v=Dj7ynTdhy1Q&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=13)
 
 
-for this MAPPING practice i have created a data.json file and putted some dumy data into the data.json file...and this data.json file is located into the src directory....
+For generating an unique id we need to install this Node package([Link](https://www.npmjs.com/package/uuid))
 
-Check (src/App.jsx  and src/components/Card.jsx)
+
