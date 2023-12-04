@@ -1,11 +1,10 @@
-# Mapping data with an unique id
+# Nested Mapping 
 
-[Tutorial](https://www.youtube.com/watch?v=Dj7ynTdhy1Q&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=13)
-
-
-For generating an unique id we need to install this Node package([Link](https://www.npmjs.com/package/uuid))
+([Tutorial](https://www.youtube.com/watch?v=f5k6QHnTMEo&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=14))
 
 
-Go to (src/components/List.jsx)
+Nested Mapping bolte bojhai mapping ar moddhe mapping korake....
+
+check (src/App.jsx and src/main.jsx)
 
 
