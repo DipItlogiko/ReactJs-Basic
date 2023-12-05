@@ -3,7 +3,7 @@
 ## How to use the template?
 
  
--   clone to your local machine
+-   clone to your local machine  (git theke clone korar pore amra dekhte pabo amader git ar branch ar nam dekhacche and amra jodi chai git clone korar pore amader amader git ar sathe ai project ar relation ta delete kore dite tahole amra amader jei directory ar moddhe git clone kore ai project ta namiyechi oi directory ar moddhe giye amader rm -rf .git command ta chalate hobe)
 -   npm install ( ai command ta chalanor sathe sathe amader node_modules directory ta amader project ar moddh chole ashbe amra jodi amader ReactJs project ar moddhe package.json file ar moddh jai tahole amader dependencies gulor nam shudu dekhte pabo kintu oi gulor kono file amader project ar moddhe thakbe na ba oi dependencies gulor kono body thakbe na amader project ar moddhe moddhe jokhon amra ai command ta chalabo tokhon amra ai node_modules directory ta peye jabo jar moddhe amader dependencies gulor sob file ba body ta thakbe)
 
 -  npm run dev (ai command ta chalale amader ReactJs project ta run hoye jabe)   
