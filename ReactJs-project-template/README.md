@@ -1,12 +1,12 @@
-# Use React Icons Into The ReactJs Project([Tutorials](https://www.youtube.com/watch?v=jHDP6myBXRM&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=21))
+# Use Bootstrap With ReactJs Project([Tutorial](https://www.youtube.com/watch?v=o97uYPQtk54&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=22))
 
 
 
-* Go to this React Icons link:[Link](https://react-icons.github.io/react-icons/)
+amader akta fresh ReactJs project create korar pore amader ai ReactJs project ar sathe Bootstrap ke add korar jonno amra google aa giye react bootstrap diye search korle prothom ai jei link ta pabo ([Link](https://react-bootstrap.netlify.app/)) ai link ar moddhe giye get started button a click korle amra dekhte pabo amader kichu command suggest korche amader ReactJs project ar moddhe amader Bootstrap ke install korar jonno and amra amader ReactJs Project ar moddhe ```npm install react-bootstrap bootstrap``` ai command ta chaliye amader Project ar moddhe amader Bootstrap ke install kore nebo....
 
 
-1. amader ai link ar moddhe enter korle amra amader Home section ar moddhe gele niche dekhte pabo amader ```npm install react-icons --save``` ai command ta dewa ache ai command ta chalanor maddhome amader ReactJs Project ar moddhe ai icon ta install hoye jabe jar fole amra react icons gulo use korte parbo amader ReactJs Project ar moddhe....
+install hoye gele amra amader ReactJs project ar moddhe package.json file ar moddhe dekhte pabo je amader dependencies ar moddhe bootstrap and react-bootstrap add hoye geche...dependencies bolte bojhai jei tar opore ba jei gulor opore amader project ta nirvor kore ba jei gulor opore amader project ta dariye ache oi guloke bole dependencies..
 
-2. amader ai command ar maddhome icon ta install hoye jawar pore amader ReactJs project ar moddhe jei package.json file ta ache oi file ar moddhe gele amra dekhte pabo amader dependencies ar moddhe amader react-icons ai nam and kon virson ta amra use korchi oi ta dekhte pabo....dependencies bolte muloto bojhai amader project ta jar oopore ba je gulor oopore nirvor kore oi guloke dependencies bole...
+amader react bootstrap take amader ReactJs project ar moddhe install kore dewar pore amara amader react bootstrap theke jekono kichu use korte parbo amader ReactJs project ar moddhe....and amader ReactJs project ar moddhe amader bootstrap ar cdn ta ooo add kore dite hobe amra ai cdn take amader index.html ar moddhe add kore dite pari ba src/App.jsx ar moddhe add kore dite pari ba src/main.jsx ar moddhe ooo add kore dite pari tobe jodi amra amader ReactJs project ar moddhe src/App.jsx ba  src/main.jsx ar moddhe amader bootstrap ta add korte hole amader ```import 'bootstrap/dist/css/bootstrap.min.css';``` ai vabe add korte hobe..
 
-3. go to src/App.jsx 
+Go to (src/components/ReactBootstrap.jsx)
