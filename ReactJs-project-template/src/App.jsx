@@ -1,12 +1,12 @@
 import React from 'react'
-import ConditionalRendering from './components/ConditionalRendering'
+import Index from './components/index'
 
 function App() {
     return (
         <div>
             <h1>Welcome</h1>
 
-            <ConditionalRendering />
+            <Index />
         </div>
     )
 }
