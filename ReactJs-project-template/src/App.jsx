@@ -1,12 +1,12 @@
 import React from 'react'
-import Index from './components/index'
+import EventBinding from './components/EventBinding'
 
 function App() {
     return (
         <div>
             <h1>Welcome</h1>
 
-            <Index />
+            <EventBinding />
         </div>
     )
 }
