@@ -1,12 +1,14 @@
-# Use Bootstrap With ReactJs Project([Tutorial](https://www.youtube.com/watch?v=o97uYPQtk54&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=22))
+# state, setState and event handler([Tutorial](https://www.youtube.com/watch?v=9AtJ4dM2xOU&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=23))
 
 
+amra muloto ReactJs ar moddhe Class Component ar moddhe state use kori kitu amra chile amader ReactJS ar moddhe Functional Component ar moddhe ooooo state use korte pari kintu Functional Component ar  moddhe State use korte hole amader useState hook use korte hobe tahole amra amader ReactJS ar moddhe Functional Component ar moddhe State use korte parbo...tai mul kotha hocche amara ReactJS ar moddhe Functional Component and Class Component ai 2tar moddhei state use korte parbo ....
 
-amader akta fresh ReactJs project create korar pore amader ai ReactJs project ar sathe Bootstrap ke add korar jonno amra google aa giye react bootstrap diye search korle prothom ai jei link ta pabo ([Link](https://react-bootstrap.netlify.app/)) ai link ar moddhe giye get started button a click korle amra dekhte pabo amader kichu command suggest korche amader ReactJs project ar moddhe amader Bootstrap ke install korar jonno and amra amader ReactJs Project ar moddhe ```npm install react-bootstrap bootstrap``` ai command ta chaliye amader Project ar moddhe amader Bootstrap ke install kore nebo....
 
+* **important things between props and state:**
 
-install hoye gele amra amader ReactJs project ar moddhe package.json file ar moddhe dekhte pabo je amader dependencies ar moddhe bootstrap and react-bootstrap add hoye geche...dependencies bolte bojhai jei tar opore ba jei gulor opore amader project ta nirvor kore ba jei gulor opore amader project ta dariye ache oi guloke bole dependencies..
+1. jokhon amra kono component ke call kore oi component ar moddhe kono data pass kortam tokhon oi component (ai component ta hote pare Functional Component ba Class Component) ta amader ai  pathano data guloke props aakare received korto and ai props ar akta oosubidha holo jokon amra Component ke call kore oi component ar moddhe kono data pass kori and amader ai pathano data take jokhon component props aakare received kore tokhon amader ai props ar data ta amra r change korte parbo na...props ar data ta tokhon readonly ar moto hoye jabe mane amader props ar data take amra shudu read eee  korte parbo kintu oi data take amra change korte parbo na...
 
-amader react bootstrap take amader ReactJs project ar moddhe install kore dewar pore amara amader react bootstrap theke jekono kichu use korte parbo amader ReactJs project ar moddhe....and amader ReactJs project ar moddhe amader bootstrap ar cdn ta ooo add kore dite hobe amra ai cdn take amader index.html ar moddhe add kore dite pari ba src/App.jsx ar moddhe add kore dite pari ba src/main.jsx ar moddhe ooo add kore dite pari tobe jodi amra amader ReactJs project ar moddhe src/App.jsx ba  src/main.jsx ar moddhe amader bootstrap ta add korte hole amader ```import 'bootstrap/dist/css/bootstrap.min.css';``` ai vabe add korte hobe..
+2. kintu amra jodi ai khettre kono Component ke call kore oi component ar moddhe kono data take jodi amra change korte chai tahole amader oi component ar moddhe  State use korte hobe....amra Functional Component and Class Component 2tar moddhei State use korte pari kintu jodi amra Functional Component  ar moddhe state use korte chai tahole amader useState hook use korte hobe..kintu Class component ar moddhe amader hook use kora lage na State use korar jonno....
 
-Go to (src/components/ReactBootstrap.jsx)
+Go to (src/App.jsx and src/components/State.jsx)
+
