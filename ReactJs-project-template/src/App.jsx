@@ -1,12 +1,12 @@
-import React from 'react'
-import Counter from './components/Counter'
+import React from 'react' 
+import Form from './components/FORM/Form'
 
 function App() {
     return (
         <div>
             <h1 style={{ textAlign: 'center' }}>Welcome</h1>
 
-            <Counter />
+            <Form />
         </div>
     )
 }

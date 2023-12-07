@@ -1,25 +1,5 @@
-# Assignment-2 (Counter App)
-
-## Total points = 5
+# Controlled component | Collect form data([Tutorial](https://www.youtube.com/watch?v=kvGNlTh3rNQ&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=31))
 
 
-### Purpose of this assignment : Testing students skills on:
-
-* useState() hook
-* Event Handler
-* conditional rendering
-
-
-### Assignment steps:
-
-* part 1: make sure that increment, decrement and reset functionality works (3 points)
-
-* part 2: disable buttons(2 points)
-
-  * disable increment button when count value is 5
-
-  * disable decrement button when count value is -5
-
-
-### this assignment will look like:([Link](https://react-assignment-2-counter-app.netlify.app/))
+check (src/App.jsx  and src/components/FORM/Form.jsx)
 
