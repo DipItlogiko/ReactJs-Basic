@@ -1,12 +1,12 @@
 import React from 'react'
-import Test from './components/Test'
+import Counter from './components/Counter'
 
 function App() {
     return (
         <div>
-            <h1>Welcome</h1>
+            <h1 style={{ textAlign: 'center' }}>Welcome</h1>
 
-            <Test />
+            <Counter />
         </div>
     )
 }
