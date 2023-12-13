@@ -1,17 +1,18 @@
 import React from 'react'
 
 import Todo from './Todo'
+import style from './Todos.module.css'
 
 function Todos(props) {
-    //console.log(props)
-    return (
-        <div>
-            <h1>here you are!!</h1>
-            {props.datas.map((data, index) => (
-                <Todo key={index} data={data} />
-            ))}
+     
+    return(
+        <div className={style.todos}>
+            <section>
+                {props.data.map((data , id) => <Todo key={id} data={data}  />)}
+            </section>
         </div>
     )
 }
+
 
 export default Todos

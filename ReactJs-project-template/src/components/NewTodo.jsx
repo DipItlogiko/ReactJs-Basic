@@ -1,25 +1,45 @@
-import React, { useState } from 'react'
+import React,{useState} from 'react'
 
-function NewTodo(props) {
-    const [todo, setTodo] = useState('')
+import style from './NewTodo.module.css'
 
-    const handelChange = (event) => {
-        setTodo((todo) => (todo = event.target.value)) ////jokhon eee amra amder state ar value take change korbo tokhon eee amder privious value ar opore base kore amader state ar value take update kora uchit and (todo) ai mane bojhai amder privious state ar value
+function NewTodo() {
+    const [data, setData] = useState({title: '' , desc: ''})
+
+    const { title, desc } = data
+
+    const changeHandler = (event) => {
+        const name = event.target.name
+
+        if (name == 'todo'){
+            setData({title: event.target.value , desc: ''})
+        }if (name == 'dese'){
+            setData({title: '' , desc: event.target.value})
+        }
+        
     }
 
-    const buttonSubmit = (event) => {
-        event.preventDefault() /// event.preventDefault() ai ta dewar karon hocche jokhon amader from ta submit hobe tokhon jeno amader data ta na chole jai reload howar pore  tai
-        props.onNewTodoData(todo) 
+    const handelSubmit = (event) => {
+        event.preventDefault()
+        console.log(data)
     }
 
-    
-
+   
     return (
         <div>
-            <form onSubmit={buttonSubmit}>
-                <label htmlFor="todo">New Todo: </label>
-                <input type="text" id="todo" name="todo" value={todo} onChange={handelChange} />
-                <button type="submit">Add Todo</button>
+            <form className={style.form} onSubmit={handelSubmit}>
+                <div className={style['form-field']}>  {/* amader css ar moddhe jodi eemon 2ta letter ar kono word thake thole amader oi class name take amader aivabe likhte hobe style['form-field'] */}
+                    <label htmlFor="todo">Title: </label>
+                    <input type="text" name="todo" id="todo" value={title} onChange={changeHandler} />  {/* akhane amader value={title} aita diye amader input field ar sathe amader state take connect kore diyechi */}
+                </div>
+
+                <div className={style['form-field']}>
+                    <label htmlFor="desc">Desc: </label>
+                    <textarea type="text" name="desc" id="desc" value={desc} onChange={changeHandler} />
+                </div>
+
+                <div>
+                    <button type="submit">Add todo</button>
+                </div>
             </form>
         </div>
     )

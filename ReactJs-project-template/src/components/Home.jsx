@@ -1,22 +1,35 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Todos from './Todos'
+import style from './Home.module.css'
 import NewTodo from './NewTodo'
 
-const dummydata = ['todo1', 'todo2', 'todo3', 'todo4', 'todo5']  /// akhane ami akta variable define korechi dummydata ai nam aaa and amader ai variable ar value hishebe akta array ache jar moddhe kichu dummydata ache
+const dummyData = [
+    {
+        id: 1,
+        title: 'hello world',
+        desc: 'this is title one',
+    },
+
+    {
+        id: 2,
+        title: 'hello world2',
+        desc: 'this is title two',
+    },
+
+    {
+        id: 3,
+        title: 'hello world3',
+        desc: 'this is title three',
+    },
+]
 
 function Home() {
-    const [data, setData] = useState(dummydata)   ///// jehetu aita amader functional component tai functional component ar moddhe state use korar jonno amader react ar useState hook ta use korte hoy ....and akhane amader data variable ar moddhe dummydata ar value gulo pass kore diyechi amader useState hook ar maddhome and setData aita hoccche amader akta function 
-
-    const handelNewTodoData = (NewTodoData) => {
-        setData([...data, NewTodoData]) ////akhane ami sprade operator ar maddhome amader data state ar sathe amader new todo ar data ta add kore diyechi
-    }
-
     return (
-        <div>
-            <h2 style={{ textAlign: 'center' }}>Welcome</h2>
-            <NewTodo onNewTodoData={handelNewTodoData} />
-            <Todos datas={data} />
+        <div className={style.container}>
+            <h1 style={{ textAlign: 'center', color: 'white' }}>Todo App</h1>
+            <NewTodo />
+            <Todos data={dummyData} />
         </div>
     )
 }
