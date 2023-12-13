@@ -1,19 +1,27 @@
-# more on state lifting ([Tutorial](https://www.youtube.com/watch?v=ajge9ZlrEqs&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=34)) 
+# A basic todo app | state lifting principle ([Tutorial](https://www.youtube.com/watch?v=h7yq5lfDZc8&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=35))
 
 
-component r function ak eee rokom dekhte hole ooo component chenar upai hocche component ar nam ar first letter capital letter hobe and component ar moddhe oobossoi akta return thakbe.... 
+state lifting bolte bojhai jokhon amra kono child component ar moddhe theke amader parent component ar moddhe data passkorbo tokhon oitake bole state lifting.....ba (bottom to top)
 
-state lifting bolte bojhai jokhon amra kono child component ar moddhe theke amader parent component ar moddhe data pass kori(bottom to top) tokhon take State Lifting bole....
+## Todo App project (Road-Map)
 
-jokhon amra parent component ar moddhe theke amader child component ar moddhe data pass korbo(top to bottom) tokhon amar khub sohoje parent component ar moddhe moddhe theke amder child component ke call kore oi child component ar moddhe props aakare amder data ta pathiye debo key valu aakare.....
+* jehetu App.jsx amder Root component tai amader ai App.jsx ta hobe sob component ar parent component hobe...
 
-amader child component theke parent component ar moddhe data pass korar somoy(bottom to top) akta bishoy mathai rakhte hobe je amder parent component ar moddhe akra method create korte hobe and oi method take amder child component ke call kore oi child component ar moddhe  pass kore dite hobe props aakare and amader child ar moddhe props ar moddhe theke pass kora amader method take dhore child component ar moddhe theke jei data ta pathate chacchi oi datata pathiye dite hobe...
+* amader kichu components thakbe jemon Home.jsx
+
+  and ai Home.jsx ar moddhe amader kichu todos data thakbe akta array ar moddhe.. 
+
+* and r akta component thakbe amader Todos nam  aaa
+ 
+  and ai Todos component ar moddhe amra amader Home.jsx theke data guloke send korbo....
+
+* and r akta component thakbe amader Todo nam aaa  
+
+  and ai Todo component ar moddhe amra amader Todos ar moddhe theke data guloke aane load korate pari...  
+
+* and r akta component thakbe NewTodo nam aaa
+
+  and ai component ar moddhe user akta data dite parbe jei data ta hobe new todo and ai data gulo chole jabe amader Home.jsx component ar moddhe karon amader Home.jsx ar moddhe amader sob Todos ar data ar list ta thakbe and amader ai todo ar moddhe theke ai data gulo giye oi component ar moddhe giye store hobe ...
 
 
-**ReactJs app structure**
 
-1. index.jsx/main.jsx (amader HTML take load kore)
-
-2. index.jsx/main.jsx ar moddhe theke amra App.jsx ke use kori (```App.jsx hocche amader Root component```)
-
-3. tar pore amra App.jsx ar moddhe onanno component gulo use korchi

@@ -1,13 +1,11 @@
-import React from "react"
+import React from 'react'
 
 function Todo(props) {
-    return(
+    return (
         <div>
-            <h1>{props.title}</h1>
-            <h2>Dibbo</h2>
+            <p>{props.data}</p>
         </div>
     )
 }
-
 
 export default Todo
