@@ -1,8 +1,8 @@
-# Control Form Data Using Formik Package([Tutorial](https://www.youtube.com/watch?v=2W1DnKc0wH4&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=37))
+# Validate Form Data Using Yup With Formik ([Tutorial](https://www.youtube.com/watch?v=vp7BByHPCl4&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=38))
 
 
-ReactJs a Formik library/package ar maddhome amra sohoje amader form ar data ta control korte pari kono dhoroner listener ba onno kichu create na kore...Go to this Documentation and install Formik package into your ReactJs project ([Formik](https://formik.org/docs/overview)) 
+* ReactJs a ```Formik``` hocche akta library/package jar maddhome amra sohoje amader form ar data gulo khub sohoje control korte pari kono dhoroner listener create na kore karon amader ai ```Formik``` ar moddhei sob kichu bydefault vabe create kora thake....
 
-Check(src/App.jsx  and src/components/Signup.jsx)
+* ReactJs a ```Yup``` hocche akta library/package jar maddhome amra amader form ar data guloke validate korte pari.....Go to this Documentation and install ```Yup``` into your ReactJs project for form data validation ([Yup](https://www.npmjs.com/package/yup))
 
 
