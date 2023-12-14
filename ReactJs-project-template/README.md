@@ -5,4 +5,6 @@
 
 * ReactJs a ```Yup``` hocche akta library/package jar maddhome amra amader form ar data guloke validate korte pari.....Go to this Documentation and install ```Yup``` into your ReactJs project for form data validation ([Yup](https://www.npmjs.com/package/yup))
 
+check (src/App.jsx and src/components/Signup.jsx)
+
 
