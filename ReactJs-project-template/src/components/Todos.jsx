@@ -8,7 +8,7 @@ function Todos(props) {
     return(
         <div className={style.todos}>
             <section>
-                {props.data.map((data , id) => <Todo key={id} data={data}  />)}
+                {props.data.map((data) => <Todo key={data.id} data={data.DataFromNewTodo} Id={data.id} onHandelDelete={props.onHandelDelete} />)}
             </section>
         </div>
     )
