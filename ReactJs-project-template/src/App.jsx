@@ -1,12 +1,12 @@
 import React from 'react'
 
-import SignUp from './components/Signup'
+import Toggle from './components/Toggle'
 
 function App() {
     return (
         <div>
-            <h2 style={{ textAlign: 'center' }}>SignUp</h2>
-            <SignUp />
+            <h2 style={{ textAlign: 'center' }}>Welcome</h2>
+            <Toggle />
         </div>
     )
 }
