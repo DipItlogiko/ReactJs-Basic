@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Home from './components/Home'
+import SignUp from './components/Signup'
 
 function App() {
     return (
         <div>
-            <Home />
-            <h2>dip</h2>
+            <h2 style={{ textAlign: 'center' }}>SignUp</h2>
+            <SignUp />
         </div>
     )
 }
