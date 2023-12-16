@@ -1,12 +1,12 @@
-import React from "react" 
+import React from 'react'
 
-import UseEffectExample from "./Components/UseEffectExample"
+import DataFatch from './Components/DataFatch'
 
-function App(){
-    return(
+function App() {
+    return (
         <div>
             <h1>welcome</h1>
-            <UseEffectExample /> 
+            <DataFatch />
         </div>
     )
 }
