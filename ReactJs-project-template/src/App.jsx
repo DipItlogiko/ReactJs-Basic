@@ -12,7 +12,7 @@ function App(){
     const LodingMessage = "Loading ..."
 
     useEffect(() => {
-        fetch('https://restcountries.com/v3.1/all')
+        fetch('https://restcountries.com/v3.1/all')  ///aita hocche amader akta RastFullAPI/RestAPI jeita ami ai https://restcountries.com website ar moddhe theke aanechi
         .then((res) => {
             if(!res.ok){
                 throw Error('Faild to Fetch data from API!!')
