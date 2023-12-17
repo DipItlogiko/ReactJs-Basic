@@ -1,19 +1,48 @@
-import React from 'react'
-///==== Akhane amader react-toastify ke amader application ar moddhe install korar por ai 2 ta import korte hobe ====////
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
- 
+import React , {useState , useEffect} from "react" 
 
-function App() {
-    const handelAddNewTodo = () => {
-        toast.success('added') ///akhane toast ar pore ami success diyechi and akta message diye diyechi..success ta amder notification take green kore dekhabe..(go to README.md and then go to react-toastify documentation)
-    }
-    return (
+import Users from "./Components/Users"
+
+
+function App(){
+    const [users , setUser] = useState(null)
+    const [isLoading , setIsLoading] = useState(true)
+    const [error , setError] = useState(null)
+
+    const LoadingMessage = "Users Loading..."
+
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res) => {
+            if(!res.ok){
+                throw Error('fatching is not successful')
+            }
+            return res.json()
+        })
+        .then((data) => {
+            setUser(data)
+            setIsLoading(false)
+             
+        })
+        .catch((error) => {
+            setError(error.message)
+            setIsLoading(false)
+            
+        })
+        
+    }, [])
+    
+    return(
         <div>
-            <h1>Todo App</h1>
-            <button onClick={handelAddNewTodo}>Add New Todo</button>
-            <ToastContainer />  {/* ai ToastContainer ta amader toast message take shundor kore dekhabee  */}
-        </div>
+            <div className="container">
+                <h1 className="title">Users Management App</h1>
+
+                {isLoading &&  LoadingMessage }
+                
+                {error && error }
+
+                <Users users={users} />
+            </div>
+        </div> 
     )
 }
 

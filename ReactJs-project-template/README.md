@@ -1,7 +1,25 @@
-# Display Notifications Using (react-toastify) ([Tutorial](https://www.youtube.com/watch?v=IP058zeOBjA&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=46))
+# Assignment-4 | fetching data, error handle ([Tutorial](https://www.youtube.com/watch?v=-EgbEaC5ro4&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=47))
 
 
-react-toastify library/package ar maddhome amra notifications show korate pari..([link](https://www.npmjs.com/package/react-toastify)) ai link ar modde Documentation ar moddhe sob kichu dewa ache aitake kon command chaliye amader ReactJs project ar moddhe install korte hobe and ki vabe amader ai notification guloke customize kora jai sob dewa ache....
+## React assigment - 4 : User Management App
+
+### Total points = 5
+
+#### Purpose of this assignment : Testing students skills on
+
+* useEffect() hook
+
+* error handling when loading data
+
+**Project will look like([Demo](https://users-mgt-app.netlify.app/))**
+
+#### Assignment steps:
+
+* all the instructtions are given in App component
+  
+  * only 3 tasks to do in App component
+
+* finally check the project demo and try to match your one as much as possible
 
 
-check(scr/App.jsx)
+check(src/App.jsx and src/Components/Users.jsx and src/Components/User.jsx)
