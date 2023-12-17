@@ -1,25 +1,17 @@
-# Assignment-4 | fetching data, error handle ([Tutorial](https://www.youtube.com/watch?v=-EgbEaC5ro4&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=47))
+#  Project 3 | Country App ([Tutorial](https://www.youtube.com/watch?v=7ujsEmu8PkQ&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=48))
 
 
-## React assigment - 4 : User Management App
+## Project steps: 
 
-### Total points = 5
+* step 1: ReactJs project setup with Vite(bundeller) and setup eslint and pretter as well
 
-#### Purpose of this assignment : Testing students skills on
+* step 2: fetch data from RestFullAPI/Rest(Representational state transfer)API using useEffect Hook
 
-* useEffect() hook
+* step 3: display data by card
 
-* error handling when loading data
+* step 4: remove country functionality
 
-**Project will look like([Demo](https://users-mgt-app.netlify.app/))**
-
-#### Assignment steps:
-
-* all the instructtions are given in App component
-  
-  * only 3 tasks to do in App component
-
-* finally check the project demo and try to match your one as much as possible
+* step 5: search country functionality
 
 
-check(src/App.jsx and src/Components/Users.jsx and src/Components/User.jsx)
+Check (src/App.jsx and src/Components/Countries.jsx and src/Components/Country.jsx and src/Components/Search.jsx)
