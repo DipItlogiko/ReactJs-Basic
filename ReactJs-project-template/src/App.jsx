@@ -1,61 +1,54 @@
-import React ,{useState , useEffect} from 'react'
+import React,{ useState , useEffect } from 'react'
 
-import Countries from './Components/Countries'
+
+import useFetch from './CustomHooks/useFetch'
+import Users from './Components/Users'
 import Search from './Components/Search'
 
 function App(){
-    const [countries, setCountry] = useState([])
-    const [filteredCountries, setFilteredCountries] = useState(countries)
-    const [isLoading, setIsLoading] = useState(true)
-    const [error, setError] = useState(null)
+   
+    const { users , isLoading , error } = useFetch('https://jsonplaceholder.typicode.com/users') ////akhane amader custom hook useFetch ke call kore akta api pass kore diyechi and oi useFetch ar moddhe theke amader data ta fatch hoye amader 3 ta state return korche jei state 3 ta ami aikhane { } ar moddhe rekhechi
 
-    const LodingMessage = "Loading ..."
-
+    const [filteredUsers , setFilteredUsers ] = useState(users)  ///akhane ami amader filteredUsers state ta ba variable take  inisilized kore diyechi amader users state ar value diye
+    
+     
     useEffect(() => {
-        fetch('https://restcountries.com/v3.1/all')  ///aita hocche amader akta RastFullAPI/RestAPI jeita ami ai https://restcountries.com website ar moddhe theke aanechi
-        .then((res) => {
-            if(!res.ok){
-                throw Error('Faild to Fetch data from API!!')
-            }
-            return res.json()
-        })
-        .then((data) => {
-            setCountry(data)
-            setFilteredCountries(data)
-            setIsLoading(false)
-        })
-        .catch((error) => {
-            setError(error.message)
-            setIsLoading(false)
-        })
-    }, []);
+        setFilteredUsers(users)   ////akhane amader  filteredUsers state ar value take update kora hoyeche users state ar value diye    
+    }, [users]) /////akhane amader useEffect ar moddhe dependency  ar moddhe users state ar nam ta diye diyechi je state ta amader useFetch.jsx ar moddhe theke ashche...jokhon ee amader ai users variable ba state ar moddhe data ashbe tokhon eee amader ai useEffect hook ta call hobe ba render hobe
 
-    const dataFromChildComponent = (name) => {
-        const filter = filteredCountries.filter((country) => country.name.common !== name)  ////akhne ami filter korechi amader child component ar moddhe theke je name ta ashche amader ai parent component ar moddhe oi name ar sathe amader record ar jei country name gulo match korbe na shudhu oi country name gulo amader filter variable ar moddhe giye store hobe and jodi amader child component ar moddhe theke aasha name ta amader record ar sathe match kore jai tahole oi take bad diye debe amader record theke 
+
+    const LoadingMessage = 'Loading...'
+
+
+    const getDataFromChildComponentUser = (id) => {
+        const filter = filteredUsers.filter((user) => user.id !== id)  /////akhane id ta ashche amader child component User theke jokhon kew delete button ar moddhe click korbe tokhon oi id ta amader User Component ar moddhe theke amader ai Parent Component ar moddhe chole ashbe mane App Component ar moddhe chole ashbe and amader filteredUsers ar moddhee jei data gulo ahche oi data ar moddhe theke akta akta kore user ar object user variable ar moddhe ashbe and ai variable ar moddhe theke ami filter korechi amader portita object ar moddhe jei id ta ache oi id tar sathe jei amader Child component theke asha id ar sathe jei gulo match korbe na oi data gulo filter hoye amader filter variable ar moddhe store hoye jabe....
          
-        setFilteredCountries(filter)
+        setFilteredUsers(filter)
     }
 
-    const DataFromChildComponent = (searchValue) => {
-        let value = searchValue.toLowerCase()  ///amader search ar moddhe jei valu ta dewa hobe oi value ta akhane  Lowercase aa convart kore niyechi mane ke boro hater letter dile oitake choto hater letter aaa convart kore nebe
-        const newCountries = countries.filter((country) => {  /// ai countries ar moddhe theke akta akta kore object amader country ar moddhe ashbe 
-            const countryName = country.name.common.toLowerCase()  /// akhane country ar moddhe jokhon akta akta kore object ar moddhe ashbe tokhon oi portita object ar moddhe theke jei name ta ache and name ar moddhe jei common ta ache oi common ar value take ami lowercase aaa convart kore diyechi
-             
-            return countryName.startsWith(value) /////akhane amder data ar moddhe theke shudhu oi sokol country ke filter korar pore return korbe jei country ar nam ta start hobe amader search ar value ar sathe oi country ar nam gulo amader data ar moddhe theke return korbe
+    const getDataFromChildComponentSearch = (searchValue) => {
+        let value = searchValue.toLowerCase()
+        const newUsers = users.filter((user) => {  ////akhane amader search ar value diye amader users state ar moddhe theke filter kora hocche karon amader users state ar moddhe all data ache tai oi users state ar modddhe theke search ar value take filter kora hoyeche and amader ai users state ta ashche useFetch.jsx ar moddhe theke...users state ar moddhe theke akta akta kore object amader user ar moddhe ashbe
+            const userName = user.name.toLowerCase()  ////user variable ar moddhe jei object ta ashbe oi object ar moddhe jei name ache oi name ar value take akhane lowercase aa convart kora hoyeche mane choto hater ookkhore convart kora hoyeche
+
+            return userName.startsWith(value)  ////and filtering ar pore amder ai khan theke return kora hoyeche userName mane amader object ar moddhe jei name ache oi name ar moddhe jei name gulo amader ai value variable ar value diye shuru hobe oi object guloke return korbe
         })
-        console.log(value)
 
-        setFilteredCountries(newCountries) ////  amader newCountries ai variable ar moddhe search ar value ar sathe match kore jei country ar nam gulo pabe amader data ar moddhe theke oi country ar nam gulo amader ai newCountries variable ar moddhe store hoye jabe  and amader setFilteredCountries ai function take call kore amader filteredCountries state ba variable take update kore diyechi amader ai newCountries variable ar value diye ..
+        setFilteredUsers(newUsers) 
     }
-
+ 
+     
     return(
-        <div>
-           <h1>Country App</h1>
-           <Search onDataFromChildComponent={DataFromChildComponent} />
-           {isLoading && LodingMessage}
-           {error && error}
+        <div>  
+           <div className='container'>
+            <h1 className='title'>Users Management App</h1>
+            <Search onGetDataFromChildComponentSearch= {getDataFromChildComponentSearch} />
 
-           {countries && <Countries  countries={filteredCountries}  onDataFromChildComponent={dataFromChildComponent} /> } {/* akhane ami prothome amader state mane countries state ar moddhe jodi data thake ba countries state ar value ta jodi true hoy tahole amader && and operator ta porer pash aaa jabe mane  amader Countries component ar moddhe countries state ar value take pass kore debe amader prothom a aita 'countries &&' chack korar karon hocche jodi amra aita na likhi tahole amra akta error face korbo error ta hocche empty mapping kora jabe na and ai error take resolve korar jonno amra prothom aa aita check korechi 'countries &&'  abong akhane ami onDataFromChildComponent ai key ar moddhe amader  ai dataFromChildComponent method take pass kore diyechi amader child component ar moddhe theke ai parents component ar moddhe data aanar jonno */}
+            {isLoading && LoadingMessage}  {/* akhane amai short carkit ar maddome korechi jodi isLoading variable ar value ta jodi true hoy ba jodi kono value thake tahole '&&' and operator ta amader porer pash aa jabe aita ke ami chaile ternay operator diye ooo korte partam ai vabe {isLoading ? LoadingMessage : null} akhane check korbe jodi isLoading variabl ar value  ta jodi true hoy ba or moddhe jodi kono value thake tahole LoadingMessage variable ar value take print korbe and jodi isLoading variable ar value ta jodi false hoy ba ar moddhe jodi kono value na thake tahole null print korbe mane kichui print korbe na */}
+            {error && error}  {/*  akhane amai short carkit ar maddome korechi jodi error variable ar value ta jodi true hoy ba jodi kono value thake tahole '&&' and operator ta amader porer pash aa jabe aita ke ami chaile ternay-operator(jar 3ta part thake take tarnary operator bole) diye ooo korte partam ai vabe {error ? <p style={{color: 'red'}}>{error}</p> : null} akhane check korbe jodi error variabl ar value  ta jodi true hoy ba or moddhe jodi kono value thake tahole p tag ar moddhe amder error message ta pring korbe and jodi error variable ar value ta jodi false hoy ba ar moddhe jodi kono value na thake tahole null print korbe mane kichui print korbe na */}
+
+           {users &&  <Users users={filteredUsers}  onGetDataFromChildComponentUser={getDataFromChildComponentUser}/>}  {/* akhane amader Users component ar moddhe users variable ar value take pass korar aage ami aita users && likhechi karon jodi ami aita na likhi tahole amader akta error dekhabe je empty variable ar value map kora jabe na tai ami users && aita likhechi mane akhane check korbe jodi amader users variable ar value ta jodi true hoy ba ai users variable ar moddhe jodi kono data thake tahole amader '&&' and operator ta porer pash aa jabe  */}
+           </div>
         </div>
     )
 }

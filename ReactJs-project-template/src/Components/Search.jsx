@@ -1,20 +1,19 @@
-import React ,{useState , useEffect} from 'react'
+import React,{useState , useEffect} from 'react'
 
 function Search(props){
-    const [searchText , setSearchText] = useState('')
+    const [searchText, setSearchText] = useState('')
 
     const handleChange = (e) => {
         setSearchText(e.target.value)
-         
     }
 
-    useEffect(() => {
-        props.onDataFromChildComponent(searchText)
-    }, [searchText])
+    useEffect(()=> {
+       props.onGetDataFromChildComponentSearch(searchText) ////akhane amader searchText state take amader App parent Component ar moddhe pass kore diyechi
+    }, [searchText])  /// akhane useEffect Hook ar moddhe ami anonimous function ar pore akta dependency add kore diyechi [searchText] mane amader searchText state ba variable ar value ta joto bar update hobe totobar amader ai useEffect hook ta call/render hobe
 
     return(
-        <div style={{ textAlign: 'center' }}>
-            <input type="text" placeholder="Search Country" value={searchText} onChange={handleChange} />
+        <div>
+            <input type="text" placeholder='Search User' value={searchText} onChange={handleChange}/>
         </div>
     )
 }

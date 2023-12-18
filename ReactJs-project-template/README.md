@@ -1,17 +1,27 @@
-#  Project 3 | Country App ([Tutorial](https://www.youtube.com/watch?v=7ujsEmu8PkQ&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=48))
+# Assignment-5 | Custom hook, delete, search ([Tutorial](https://www.youtube.com/watch?v=dJzDsdDZ3sI&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=49))
 
 
-## Project steps: 
 
-* step 1: ReactJs project setup with Vite(bundeller) and setup eslint and pretter as well
+## React assigment - 5 : Custom hook, delete and search
 
-* step 2: fetch data from RestFullAPI/Rest(Representational state transfer)API using useEffect Hook
+### Total points = 5
 
-* step 3: display data by card
+### Purpose of this assignment : Testing students skills on
 
-* step 4: remove country functionality
+* custom hook
 
-* step 5: search country functionality
+* event handling
+
+* state lifting
 
 
-Check (src/App.jsx and src/Components/Countries.jsx and src/Components/Country.jsx and src/Components/Search.jsx)
+**Project Will Look Like([Demo](https://users-mgt-app-2.netlify.app/))**
+
+### Assignment steps:
+
+* Task 1: useFetch file - Implement custom hook for fetching data. check useFetch file for all instructions. (points-2)
+
+* Task 2: App.js file - follow all the instructions given in the App.js file (points-3)
+
+
+check (src/App.jsx  and src/CustomHooks/useFetch.jsx and src/Components/Users.jsx and src/Components/user.jsx and src/Components/Search.jsx)
