@@ -2,7 +2,7 @@
 
 
 
-## React assigment - 5 : Custom hook, delete and search
+## React assigment - 5 :  (User Management App) Custom hook, delete and search
 
 ### Total points = 5
 
@@ -12,7 +12,7 @@
 
 * event handling
 
-* state lifting
+* state lifting (jokhon amra child component ar moddhe theke parent component ar moddhe data pass kori tokhon take ```state lifting``` ba ```bottom to top ``` bole)
 
 
 **Project Will Look Like([Demo](https://users-mgt-app-2.netlify.app/))**
