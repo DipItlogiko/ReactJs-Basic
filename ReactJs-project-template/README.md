@@ -1,27 +1,7 @@
-# Assignment-5 | (User Management App)Custom hook, delete, search ([Tutorial](https://www.youtube.com/watch?v=dJzDsdDZ3sI&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=49))
+#  dynamic styling in ReactJs ([Tutorial](https://www.youtube.com/watch?v=Eru9-kZfhw4&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=50))
 
 
+dynamic styling mane hocche jokhon kono condition ar opore vitti kore styling add kora hoy tokhon take dynamic styling bole..
 
-## React assigment - 5 :  (User Management App) Custom hook, delete and search
+check(src/App.jsx and public/index.jsx)
 
-### Total points = 5
-
-### Purpose of this assignment : Testing students skills on
-
-* custom hook
-
-* event handling
-
-* state lifting (jokhon amra child component ar moddhe theke parent component ar moddhe data pass kori tokhon take ```state lifting``` ba ```bottom to top ``` bole)
-
-
-**Project Will Look Like([Demo](https://users-mgt-app-2.netlify.app/))**
-
-### Assignment steps:
-
-* Task 1: useFetch file - Implement custom hook for fetching data. check useFetch file for all instructions. (points-2)
-
-* Task 2: App.js file - follow all the instructions given in the App.js file (points-3)
-
-
-check (src/App.jsx  and src/CustomHooks/useFetch.jsx and src/Components/Users.jsx and src/Components/user.jsx and src/Components/Search.jsx)
