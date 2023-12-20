@@ -11,3 +11,6 @@ amra amader ReacJs ar sob Hook gulo Functional Component ar moddhe likhi ba use 
  jodi amader 2 ta ba 3 state thake tar jonno useReducer hook ta use na kori valo ...kintu jodi oonek gulo ak eee type ar state use korte hoy jara akee ooner sathe inter related shei khetrre amra useReducer hook use kore oi state guloke control korte pari
 
 
+ Check(src/App.jsx and src/Components/index.jsx and src/Components/Modal.jsx)
+
+
