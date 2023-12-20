@@ -1,11 +1,13 @@
 import React from 'react'
 
-import LifeCycle from './Components/LifeCycle'
+import UserForm from './Components/UserForm'
+
+ 
 
 function App() {
     return (
         <div>
-          <LifeCycle />
+           <UserForm />
         </div>
     )
 }
