@@ -1,16 +1,16 @@
-# React Hooks | useReducer Hook ([Tutorial](https://www.youtube.com/watch?v=l_BhBNhNwhE&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=56))
+#  prop drilling ([Tutorial](https://www.youtube.com/watch?v=_JNIQXYSUu4&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=57))
 
 
-amra amader ReacJs ar sob Hook gulo Functional Component ar moddhe likhi ba use kori....
+![imagte](./public/Screenshot%20from%202023-12-20%2018-21-35.png)
+
+amra ai oporer image theke dekhte parchi amader akhane 4 ta componet ache aita hote pare jekono component and ai 4 ta component ar moddhe parent child ar somporko ache jemon amader component ta hocche sobar parent component component2 ta hocche component1 ar child component3 ta hocche component2 ar child and component4 ta hocche component3 ar child ....akhon jodi ami component1 theke component4 ar moddhe amder ai "anisul islam" string take pass korte chai tahole amader props aakare aivabe data pass korte hobe
+
+**component1->component2->component3->component4**
+
+and aitakei bole **```Prop drilling```** mane prop ke drilling kore amder component1 theke component4 ar moddhe niye jete pari....
+
+kintu ai **```Prop drilling```** ar akta proble hocche jodi ami component1 theke component4 ar moddhe sorasori data ba string ta pass korte chai **component1->component4** ta amra parbo na
 
 
-* ```useReducer``` Hook ar kaj hocche jemon dhora jak
 
- amader books nam aaa akta data list ache and ami oi books data list ar moddhe new book add korte parbo and new book add korar sathe sathe amder akta text message show korte chacchi modal ar moddhe and books data list ar moddhe theke jokon ami kono book ke remove korbo tokhon tokhon ooo ami akta text message show korate chacchi amader modal ar moddhe..to ai kaj gulo korar jonno amder books , modalText, isModalOpen ai 3ta state nite hobe kintu amra ai kajtake ```useReducer``` hook use kore akta matro state dara korte pari....
-
- jodi amader 2 ta ba 3 state thake tar jonno useReducer hook ta use na kori valo ...kintu jodi oonek gulo ak eee type ar state use korte hoy jara akee ooner sathe inter related shei khetrre amra useReducer hook use kore oi state guloke akta state ar moddhe control korte pari
-
-
- Check(src/App.jsx and src/Components/index.jsx and src/Components/Modal.jsx)
-
-
+**Prop drilling ar ai problem take amra **```useContext```** Hook ar maddhome solve korte pari**
