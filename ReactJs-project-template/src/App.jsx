@@ -1,13 +1,11 @@
 import React from 'react'
 
-import UserForm from './Components/UserForm'
-
- 
+import Index from './Components/Index' 
 
 function App() {
     return (
         <div>
-           <UserForm />
+          <Index />
         </div>
     )
 }
