@@ -1,4 +1,4 @@
-#  prop drilling ([Tutorial](https://www.youtube.com/watch?v=_JNIQXYSUu4&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=57))
+#  React Hooks | useContext Hook ([Tutorial](https://www.youtube.com/watch?v=RYeRn5_xL7k&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=58))
 
 
 ![imagte](./public/Screenshot%20from%202023-12-20%2018-21-35.png)
@@ -14,3 +14,15 @@ kintu ai **```Prop drilling```** ar akta problem hocche jodi ami component1 thek
 
 
 **Prop drilling ar ai problem take amra **```useContext```** Hook ar maddhome solve korte pari**
+
+
+**```useContext```** Hook ar sahajje amra global state set korte pari...jemon ami jodi amader parent component ar moddhe global state create kore dei tahole amader ai parent component ar under aaa joto gulo child componet thakbe oi child component gulo kono prop drilling charai sorasori oi global state ar value take access korte parbe componet1 theke sorasori componet4 oi state ar value ta ke access korte parbe kono prop drilling charai useContext Hook ar maddhome
+
+
+## ```useContext``` hook take use korar jonno amader ai 3 ta stap follow korte hobe
+
+step1: create Context (check src/Components/UserContext.jsx)
+
+step2: wrap childs components with context provider from parent component (check src/Components/Component1.jsx)
+
+step3: access global state by useContext Hook from child component (check src/Components/Component4.jsx)
