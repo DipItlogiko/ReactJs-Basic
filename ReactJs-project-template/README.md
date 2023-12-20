@@ -9,7 +9,7 @@ amra ai oporer image theke dekhte parchi amader akhane 4 ta componet ache aita h
 
 and aitakei bole **```Prop drilling```** mane prop ke drilling kore amder component1 theke component4 ar moddhe niye jete pari....
 
-kintu ai **```Prop drilling```** ar akta proble hocche jodi ami component1 theke component4 ar moddhe sorasori data ba string ta pass korte chai **component1->component4** ta amra parbo na
+kintu ai **```Prop drilling```** ar akta problem hocche jodi ami component1 theke component4 ar moddhe sorasori data ba string ta pass korte chai **component1->component4** ta amra parbo na
 
 
 
