@@ -1,3 +1,0 @@
-import React from 'react'
-
-export  const UserContext = React.createContext() /////akhane ami React ar moddhe theke createContext() method take call korechi and ar value take amder UserContext variable ar moddhe store kore diyechi.....amader UserContext variable ta 2ta jinish amader debe "provider and consumer" ar moddhe theke amra provider ta use korbo and consumer ar poriborte amra useContext hook ta use korbo
