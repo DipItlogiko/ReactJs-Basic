@@ -7,11 +7,13 @@ import Home from './Pages/Home'
 import Contact from './Pages/Contact'
 import Blog from './Pages/Blogs'
 import Error from './Pages/Error'
+import Navbar from './NavBar/Navbar'
 
 function App() {
     return (
         <div>           
             <BrowserRouter>  {/* akhane ami structure ta likhechi jemon amader BrowserRouter ar moddhe thakbe Routes and Routes  ar moddhe thakbe Route */}
+                <Navbar />  {/* akhane amader Navbar ba Navigation Bar ta dekhabe jei take amra opore import korechi and ai Navbar Component take ai khane lekhar karon hocche mane Routes ar opore likhar karon hocche amader sob page ar opore ai Navbar ba Navigation Bar ta dekhabe */}
                 <Routes>
                     <Route path='/' element={ <Index /> } /> 
                     <Route path='/home' element={ <Home /> }/> {/* akhane ami path='/home' aita diye bole diyechi amader route ar path ta and element={ <Home /> } aikhane element ar moddhe ami amader Home Component take likhe diyechi johon kew amader ai ReactJs porject ta browser aaa run kore jokhon /home route take hit kora hobe browser aaa tokhon amader ai element ar moddhe jei Home component ta ache oi conponent ar moddhe jei content gulo ache oi content gulo dekhabe  amader browser ar moddhe*/}
