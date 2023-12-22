@@ -1,5 +1,5 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'  /////akhane amra amader ReactRoute package jei package take amra install korechi amader project ar moddhe routing ar kaj korar jonno oi package ar moddhe theke useNavigate hook take import korechi redirect korar jonno
+import { useNavigate } from 'react-router-dom'  /////akhane amra amader ReactRouter package jei package take amra install korechi amader project ar moddhe routing ar kaj korar jonno oi package ar moddhe theke useNavigate hook take import korechi redirect korar jonno
 
 function Home() {
     const navigate = useNavigate() ////akhane amader  useNavigate hook take call kore navigate variable ar moddhe store kore diyechi
