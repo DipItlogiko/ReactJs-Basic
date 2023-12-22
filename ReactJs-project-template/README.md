@@ -1,12 +1,7 @@
-# how to use useReducer with Context API ([Tutorial](https://www.youtube.com/watch?v=cbbxCCMOeTM&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=60))
+# react routing | introduction to react routing ([Tutorial](https://www.youtube.com/watch?v=1_powatXjds&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=61))
 
 
-* ```useReducer``` ta hocche amder ReactJs ar akta Hook...ai hook ar maddhome amara oonek gulo state akta state ar moddhe rekhe oi state guloke handel korte pari....
+jokhon amra akta fresh ReactJs project setUp kori ```vite``` ba ```parcel``` (bundeller) diye tokhon amader oi ReactJs project ar moddhe routing ar jonno kono fachility thake na and ai routing fachility take amader ReactJs project ar moddhe add korar jonno ReactRouter package ta install korte hobe amader ReactJs project ar moddhe... ai command ar maddhome  "npm install reac
+t-router-dom" ba amra chaile amader ReactRouter.com ai website ar moddhe theke oooo amader ai ReactRouter package install korar command ta copy kore niye ashte pari
 
-jemon jodi amamder ak eee type ar oonek gulo state thake and  oi state gulo jodi akta r aktar sathe inter related thake tahole amra useReducer Hook use kore oi state guloke akta state ar moddhe handel korte pari...
-
-jodi amader 3 ta state thake tahole useReducer Hook ta use na korai valo kintu jodi amder 3 ta ar opore state thake tahole amra useReducer Hook use kore oi state guloke akta state ar moddhe handel korte pari...
-
-check (src/App.jsx and src/Components/UserContext.jsx and src/CustomHook/useUsersContext.jsx and src/Components/UsersContext.jsx)
-
-**ai video ar 10:11 ar pore jei practice ta dekhiyeche je useReducer Context API ar sathe use korar pore amara kivabe amader code take rr oo symplify korte pari oi part tukur practice ami kori nai**
+Check(src/App.jsx and src/Pages)
