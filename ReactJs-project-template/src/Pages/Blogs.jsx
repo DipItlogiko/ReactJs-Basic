@@ -1,20 +1,18 @@
-import React from 'react'
+import React,{ useState } from 'react'
+
+import { blogsData } from '../Data/Data.jsx'  /////jehetu ami amader src/Data/Data.jsx ar moddhe theke akta variable ke shudhu export defalut na kore shudhu export korechi tai amader oi variable take { }curly braces ar moddhe rakhte hobe import korar somoy
+import Blog from '../Pages/Blog.jsx'
 
 function Blogs() {
+    const [blogs ,setBlogs] = useState(blogsData)
+    // console.log(blogs)
     return (
         <div>
             <h1>Blogs Page</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illum pariatur nihil harum enim
-                dolorum vitae itaque qui eius ea molestiae velit id quaerat at aut eligendi minima quos, ex consequuntur
-                atque quam repudiandae! Modi optio quos, aspernatur veniam cum quas? Fuga delectus minus eum quisquam
-                rem tempore sapiente amet.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima non, maiores veritatis a deserunt
-                molestias! Sapiente illum iure eaque tempore laborum temporibus totam consequuntur, quae corrupti,
-                nulla, perspiciatis nobis est!
-            </p>
+            <section>                 
+                {blogs.map((blog) => <Blog key={blog.id} {...blog} /> )}
+            </section>
+             
         </div>
     )
 }
