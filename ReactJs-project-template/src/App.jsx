@@ -20,8 +20,8 @@ function App() {
                     <Route path='/home' element={ <Home /> }/> {/* akhane ami path='/home' aita diye bole diyechi amader route ar path ta and element={ <Home /> } aikhane element ar moddhe ami amader Home Component take likhe diyechi johon kew amader ai ReactJs porject ta browser aaa run kore jokhon /home route take hit kora hobe browser aaa tokhon amader ai element ar moddhe jei Home component ta ache oi conponent ar moddhe jei content gulo ache oi content gulo dekhabe  amader browser ar moddhe*/}
                     <Route path='/contact' element={ <Contact /> } />
                     <Route path='/blogs' element={ <Blogs /> } />
-
-                    <Route path='/blogs/:title' element={ <DynamicRouting /> } />  {/* akhane ami dynamik routing korechi path ar moddhe :title diye bolechi title ar value ta ja hobe oi value ta /bolgs/ ar pore bose jabe and ai title ar value ta ashche amader src/Pages/Bolg.jsx ar moddhe theke and ai :title ar value take amader ai <DynamicRouting /> component ta access korte parbe useParams Hook ar maddhome */}
+                    {/* Dynamik Routing */}
+                    <Route path='/blogs/:title' element={ <DynamicRouting /> } />  {/* akhane ami dynamik routing korechi path ar moddhe :title diye bolechi title ar value ta ja hobe oi value ta /bolgs/ ar pore bose jabe and ai title ar value ta ashche amader src/Pages/Bolg.jsx ar moddhe theke and ai :title ar value take amader ai <DynamicRouting /> component ta access korte parbe useLocation Hook ar maddhome */}
 
                     <Route path='*' element={ <Error /> } />  {/* akhane ami path='*' aita mane hocche jodi eemon kono route ba url diye amader browser ar moddhe hit kora hoy jei route ba url ta amra create kori nai tokhon oi route ba url ta amader ai astic "*" path ar moddhe chole ashbe and akhane amader element ar moddhe jei Component ta ache oi Component ar moddhe jei content gulo ache ta browser ar moddhe show korbe */}
                     

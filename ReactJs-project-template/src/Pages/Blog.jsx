@@ -9,7 +9,7 @@ function Blog({ id, title , body }){
             return str.slice(0, num) + '...'  ////akhane return korbe amader str ar moddhe jei value ta ache oi value theke slice korbe mane katbe 0 theke oi num ar value porjonto and tar sathe "..." aita add kore debe
         }
         else{      /////jodi amader str ar value ta num ar value ar theke choto hoy tahole amader str tai return korbe 
-            return str  
+            return str
         }
 
     }
@@ -18,7 +18,7 @@ function Blog({ id, title , body }){
            <article>
              <h3>{title}</h3>
              <p>{truncateString(body , 100)}</p>  {/* akhane ami akta function opore create kore oi function take call kore oi function ar moddhe 2ta paramiter pass kore diyechi body , 100  */}
-             <Link to={title}>Learn More</Link>  {/* akhane jokhon eee amader Learn More button ar moddhe click kora hobe tokhon amader "to" ar moddhe jei title ar value ta thakbe oi value oonujayi amader oi route ar moddhe niye jabe App.jsx ar moddhe theke */}
+             <Link to={title} state={{ id ,title, body }}>Learn More</Link>  {/* akhane jokhon eee amader Learn More button ar moddhe click kora hobe tokhon amader "to" ar moddhe jei title ar value ta thakbe oi value oonujayi amader oi route ar moddhe niye jabe App.jsx ar moddhe theke and ami state ar moddhe amder id title and body ar value ta oo pass kore diyechi and ai data gulo amader App.jsx ar moddhe theke  oi route ar moddhe pass hoye jabe and ai state={ } ar moddhe ami jei data gulo pass korchi object ar moddhe ai data guloke access korar jonno amader useLocation hook ta use korte hobe*/}
            </article>
            
         </div>
