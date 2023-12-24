@@ -1,4 +1,4 @@
-# How to deploy react app on netlify from GitHub([Tutorial](https://www.youtube.com/watch?v=y4DZJKGCIPc&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=70))
+# How to deploy ReactJs app on netlify from GitHub([Tutorial](https://www.youtube.com/watch?v=y4DZJKGCIPc&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=70))
 
  
 * GitHub theke amader ReactJs project take Netlify(Netlify hocche akta free web hosting service provider website) te host korar akta shuvida hocche amra jei github ReactJs project ar repository ta amader  Netlify te host korbo oi repository te jodi ami kono change kori tahole amader Netlify te ooo amader oi project change hobe.....
