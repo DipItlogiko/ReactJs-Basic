@@ -1,10 +1,6 @@
-# page_title_setup | react_helmet_npm_package([Tutorial](https://www.youtube.com/watch?v=Uvm024uzSjk&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=69))
+# How to deploy react app on netlify from GitHub([Tutorial](https://www.youtube.com/watch?v=y4DZJKGCIPc&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=70))
 
  
-ReactJs ar moddhe jokhon amra route use korbo tokhon ak page ar moddhe theke jokhon oonno page ar moddhe jabe tokhon amader protita page ar title take dekhanor jonno amader akta npm package install kore nite hobe jar nam ```helmet```......and title ta amra amader browser ar tab ar moddhe dekhte pai 
+* GitHub theke amader ReactJs project take Netlify(Netlify hocche akta free web hosting service provider website) te host korar akta shuvida hocche amra jei github ReactJs project ar repository ta amader  Netlify te host korbo oi repository te jodi ami kono change kori tahole amader Netlify te ooo amader oi project change hobe.....
 
-* ```npm helmet package```([website](https://www.npmjs.com/package/react-helmet))
-
-* helmet package install command: ```npm i react-helmet```
-
-check(src/App.jsx and src/components/PageTitle.jsx)
+* jodi amra Github ar maddhome amder ReactJs project take Netlify te host korte na chai tahole amader prothom aa amader ReactJs project ar moddhe diye ```npm run build``` command ta chalate hobe and ai command ta chalanor pore amra akta directory pabo oi directory take just drag kore amader Netlify website ar moddhe drop kore dite hobe that it..
