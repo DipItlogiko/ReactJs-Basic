@@ -6,3 +6,5 @@ ReactJs ar moddhe jokhon amra route use korbo tokhon ak page ar moddhe theke jok
 * ```npm helmet package```([website](https://www.npmjs.com/package/react-helmet))
 
 * helmet package install command: ```npm i react-helmet```
+
+check(src/App.jsx and src/components/PageTitle.jsx)
