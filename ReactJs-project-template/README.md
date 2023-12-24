@@ -1,6 +1,6 @@
 # ReactJs_project_file_structure_best_practice([Tutorial](https://www.youtube.com/watch?v=Emb-pOw_LmY&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=67))
 
-
+```Vit``` ba ```Parcel``` (bundler) ar maddhome akta fresh ReactJs project create kore
 jokhon amra ReactJs project korbo tokhon amader file structure ta kemon howa uchit ta ai khane kora hoyeche ashole ak ak company ar ak ak dhoroner file structure thakte pare ba ai ta parson to parson vari kore tobe aikhane amader standard way ta follow kora hoyeche.... 
 
 1. ```src``` directory ar moddhe amra akta directory create korbo ```routes``` nam aaa and oi ```routes``` directory ar moddhe amader akta file create korbo ```Index.jsx``` nam aaa and ai ```Index.jsx```  file ar moddhe amra amader sob routing ar kaj korbo...and ai ```routes``` directory ar moddhe amra PrivateRoute ar kaj korar jonno ```PrivateRoute.jsx``` nam aa akta file create korbo and ProtectedRoute ar kaj korar jonno ```ProtectedRoute.jsx``` nam aaa r ooo akta file create korbo amader  ```routes``` directory ar moddhe.....
