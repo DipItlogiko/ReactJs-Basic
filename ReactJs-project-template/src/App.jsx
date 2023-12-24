@@ -1,11 +1,9 @@
 import React from "react"
 
-import Routes from "./routes/RoutesFile"
-
 function App(){
     return(
         <div>
-            <Routes />
+            amra ai App.jsx ar moddhe theke shudhu route guloke access korbo ta chara r kichur kaj korbo na
         </div>
     )
 }
