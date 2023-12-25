@@ -6,6 +6,4 @@ jokhon amra Callback function niye kaj korbo tokhon jodi amra oi callback functi
 Callback function ta bolte akhane bojhano hoyeche jemon amra jani jokhon amra parent component ar moddhe theke child component ar moddhe data pass kori tokhon amra props aakare amader parent component ar moddhe theke child component ar moddhe data pass kori ba props drilling kore data pass kori and aitake bole ```top to bottom``` and jokhon amra child component ar moddhe theke parent component ar moddhe data pass kori tokhon oitake bole ```bottom to top``` ba ```state lifting```...jokhon amra ```state lifting``` ba ```bottom to top``` korbo mane amader child component ar moddhe theke parent component ar moddhe data pass korbo tokhon amader parent component ar moddhe akta method ba callback function create korte hoy oi child component theke asha data take accept korar jonno and ai method ba callback function take amader props ar maddhome pass kore dite hobe amader parent component ar moddhe theke child componet ke call kore oi child component ar moddhe props aakare amader oi method ba callback function take pass kore dite hobe jei method ba callback function take amra create korechi amader parent component ar moddhe and aije jei method ba callback function take amra amader child component ar moddhe pass korchi  amader child component ar moddhe theke data aanar jonno amader parent component ar moddhe ai method ta ba callback function takei bole muloto Callback function....  
 
 
-
-
- 
+Check(src/App.jsx and src/components/Message.jsx) 
