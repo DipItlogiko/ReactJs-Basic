@@ -15,7 +15,7 @@ const counterInitialState = {  /////akhane amra count nam aaa akta state create 
 }
 
 ///action define-------------------------
-const countIncrement = () => {   ////akhane amader action ke akta function ar moddhe rekhechi tai ai function ke bole action creator function
+const countIncrement = () => {   ////akhane amader action ke akta function ar moddhe rekhechi tai ai function ke bole action creator function...and action ar moddhe akta object { } thake and ai { } object ar moddhe amra 2 ta jinish niye kaj kori "type" ai  type ar moddhe amra bole dei amader action ar type ta ki hobe and "payload" ai payload ar maddhome amra action ar moddhe theke Reduser ar moddhe data pass kori and amader ai { } action ke ai countIncrement function ar moddhe rekhechi tai ai function ke bola hobe Action Creator Function
     return {
         type: INCREMENT,
     }
