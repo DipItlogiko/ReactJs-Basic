@@ -1,4 +1,4 @@
-# redux | state,actions,Reducers,Stor ([state,action](https://www.youtube.com/watch?v=ttunWZ9sN0Q&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=76))([Reducers](https://www.youtube.com/watch?v=n919ZQgWnCc&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=77))([Store](https://www.youtube.com/watch?v=ZstJi--kgHA&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=78))
+#  redux | complete counter app ([Tutorial](https://www.youtube.com/watch?v=__nMP46Z580&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=79))
 
 
 
@@ -7,7 +7,9 @@
 * ```npm install react-redux```
 
 
-amader ai branch ar moddhe amra just amader directory ar moddhe likhe rekhechi kivabe amader redux ta kaj kore....
+kintu amra ai branch ar moddhe ReactJs project ar sathe Redux javascript library take use kori nai  amra shudhu Redux javascript library niye kaj korchi tai amar akhane ```npm install redux```command ta chaliye amader redux javascript library take install kore niyechi....
 
-Check(src/App.jsx , src/services/actions/ButtonAction.jsx , src/services/constants/ButtonReducer.jsx , src/services/reducers/ButtonReducer.jsx, src/services/store/Store.jsx )
 
+Check (index.jsx and run node index.jsx)
+
+***Note:***  jodi amader index.jsx ar moddhe ki kora hoyeche ta na bojho tahole check ```redux|state,actions,Reducers,Store``` Branch
