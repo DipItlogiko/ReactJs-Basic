@@ -24,7 +24,7 @@ redux-logger hocche popular akta Middleware...
 
 for install this redux-logger middleware run this command ```npm i redux-logger```
 
-ai redux-logger Middleware ta amader previous state ki chilo ,kon action hoyeche, next state ta dekhabe and action ta kokhon hoyechilo oi time ta dekhabe...
+**ai redux-logger Middleware ta amader previous state ki chilo ,kon action hoyeche, next state ta dekhabe and action ta kokhon hoyechilo oi time ta dekhabe...**
 
 
 Check(index.jsx and run ```node index.jsx```)
