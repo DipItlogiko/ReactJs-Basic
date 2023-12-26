@@ -1,12 +1,7 @@
-////////=========Multiple Reducers=========////////
-///akhane amra 2ta Reducer create korbo
-
-///productReducer : aakhane product related jei state gulo thakbe oi state gulo niye kaj korbe 
-
-///cartReducer : aaakhane cart related jei state gulo thakbe oi state gulo niye kaj korbe
+const { createStore , applyMiddleware } = require("redux") /////akhane redux javascript library ar moddhe theke createStore take import kora hoyeche store create korar jonno and applyMiddleware take import kora hoyeche middleware use korar jonno
+const { default: logger } = require("redux-logger")  ////amra jei redux-logger middleware ta install korechi oi middleware ar moddhe theke logger ke import korechi
 
 
-///////-----product Reducer-------//////
 // constent
 const GET_PRODUCT = 'GET_PRODUCT'
 const ADD_PRODUCT = 'ADD_PRODUCT'
@@ -48,82 +43,19 @@ const productReducer = (state=initialProductState , action) => {
             }
     
         default:
-            return state;
+            return state;  /////Reducer hocche akta pure function ...pure function mane hocche jei function input niye output kichu na kichu return kore tai jodi amder akhane kono action eee na hoy ba kono action na ashe tahole oooo amader state ar value ta return korbe karon amader Reducer function ta hocche pure function and ai pure function ar kaj hocche kichu na kichu return kora
     }
 }
-////amra amader 2 ta reducer ar jonno akta eee store use korbo jei ta amra niche korechi
+ 
 //store
-// const { createStore } = require("redux")
+const store = createStore(productReducer , applyMiddleware(logger)) //////akhane amader productReducer ar moddhe theke jei updated state ar value ta ashbe mane jokhon kono action dispatch hobe oi action ar type oonujayi amader Reducer ar moddhe jabe and amader Reducer ar moddhe theke state ta update hoye akhane chole ashbe and oi updated state ta niye akta store create korbe and store variable ar moddhe store kore debe and akhane ami applyMiddleware() ai method ar moddhe bole diyechi ami kon middleware ta use korbo....jemon ami akhane bole diyechi logger use korbo and ami middleware ar jonno redux-logger package take install korechi and ai file ar opore oitake import kore niyechi...and ai logger middleware ta amader previous state ,action, next state and action ta kokhon hoyechilo oi time ta dekhabe
 
-// const store = createStore(productReducer)
-
-// store.subscribe(()=> {
-//     console.log(store.getState())
-// })
-
-// store.dispatch(getProduct())
-// store.dispatch(addProduct("blazzer"))
-
-
-///////-----Cart Reducer-------//////
-//constents
-const GET_CART = "GET_CART"
-const ADD_CART = "ADD_CART"
-
-
-//state
-const initialCartState = {
-    cart:["blazzer"],
-    totalCart:1,
-}
-
-//action
-const getCart = () => {
-    return{
-        type: GET_CART,
-    }
-}
-
-const addCart = (Data) => {
-    return{
-        type: ADD_CART,
-        payload: Data,
-    }
-}
-
-//Reduser
-const cartReducer = (state=initialCartState , action) => {
-    ////===amra cahile ai switch na bebohar kore if else diye oo korte partam check GitHub ReactJs Basic repository useReducer() hook branch===///
-    switch (action.type) {
-        case GET_CART:
-            return{
-                ...state
-            }
-            
-        case ADD_CART:
-            return{
-                cart: [...state.cart , action.payload],
-                totalCart: state.totalCart + 1
-            }
-    
-        default:
-            return state;
-    }
-}
-///amra amader product Reducer and  Cart Reducer ar jonno akta eeee store create korchi
-//store
-const { createStore, combineReducers } = require("redux")  /////akhane amader redux javascript library ar moddhe theke createStore ke import korechi store create korar jonno and combineReducers ke import korechi amader 2ta reducer ke combine kora jonno
-
-const rootReducer = combineReducers({   ////akhane combineReducers() method take call kore tar moddhe akta object define kore diyechi and ai object ar moddhe 
-    productR: productReducer,    /////amader productReducer ke productR key ar moddhe store kore diyechi
-    cartR: cartReducer, ////amader cartReducer ke cartR key ar moddhe store kore diyechi
+store.subscribe(()=> { //// akhane ami store ar subscribe() method take call korechi karon subscribe() method ta amder store ar theke View ke update kore debe and amra dekhte pabo..
+    console.log(store.getState())  ///akhane amader store ar getState() method take call korechi ai getState() method ar kaj hocche amader state ar oobochtha gulo dekhano jemon ami aikhane store.getState() take call kore amader store variable ar state ar obochtha ta dekhchi getState ar maddhome console ar moddhe 
 })
 
-const Store = createStore(rootReducer)   //////akhane amra akta store create korechi createStore() method take call kore and tar moddhe amader rootReducer ke pass kore diyechi...amader rootReducer ar moddhe amra 2 ta reducers ke combine kore diyechi karon amra sorosori createStore() ar moddhe 2 ta Reducer ke akbare likhte parbo na tai amra ai 2ta Reducer ke combine kore rootReducer variable ar moddhe rekhe diyechi and oi variable take akhane pass kore diyechi
+store.dispatch(getProduct()) //// aikhane store ar dispatch() method take call kore akta action function ar nam pass kore diyechi and ai dispatch method ta amder oi pass kora action take dispatch korbe and oi action ta amader Reducer ar moddhe jabe and amader Reducer ar moddhe theke action type oonujayi amader state ar value take update kore store ar moddhe pass kore debe  
+store.dispatch(addProduct("blazzer")) ////akhane ami addProduct() action take dispatch korar somoy akta data pass kore diyechi "blazzer" and ai data ta amader ai action function ta receive korbe and payload ar maddhome amader ai data take Reducer ar moddhe pass kore debe tar pore amder Reducer ar moddhe theke action ar type oonujayi amader state ta update hoye amader store ar moddhe chole ashbe 
 
-Store.subscribe(()=> {  //////subscribe hocche amader store ar akta method jar maddhome amra amader store ar theke View ar moddhe amader update kore debe and amra dekhte pabo 
-    console.log(Store.getState())   /////getState() hocche amader store ar akta method  jar maddhome amader state ar obochtha dekhte pari akhane amra amader console ar moddhe state ar obochta ta dekhabe node index.jsx command ta chalale
-})
 
-Store.dispatch(getCart())   /////dispatch() hocche amader store ar r akta method jar maddhome amra amader kono action ke dispatch korte pari....and jokhon amder kono action dispatch hoy tokhon oita action ar moddhe jai and oi action ar type onujayi amader Reduser ar moddhe jabe and Reducer ar moddhe action type oonujayi jei kaj gulo kora ache oi kaj gulo korebe tar pore amder state ta update hoye store ar moddhe chole ashbe and ai store ar moddhe theke view ar moddhe update hoye jabe
-Store.dispatch(addProduct("blazzer"))
+ 
