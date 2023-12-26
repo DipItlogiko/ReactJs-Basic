@@ -1,117 +1,129 @@
-// state - count:0
-//actions - increment, decrement ,reset
-//reduser - actions guloke handel  korbe
-/// store - amader reduser ar moddhe theke jei updated state ar value gulo ashbe oi updated state ar value gulo amader ai store ar moddhe store  hoye jabe and ai store ar moddhe theke amader view ar moddhe update hoye jabe
+////////=========Multiple Reducers=========////////
+///akhane amra 2ta Reducer create korbo
 
-///constants ------------------------   
-const INCREMENT = 'INCREMENT'   ///akhane ami constants create korechi mane akta variable ar moddhe akta string ke store kore rekhechi jeno amader speling mistake na hoy mane jeno amader banan vul na hoy tar jonno kokhon amra amader action ar moddhe type likhbo tokhon amader oonek somoy speling mistake hote pare tai oi type ar string take amra aivabe akta variable ar moddhe store kore rekhe tar pore ai variable take amader action ar type ar moddhe likhe debo
-const DECREMENT = 'DECREMENT'
-const RESET = 'RESET'
-const INCREMENT_BY_VALUE = 'INCREMENT BY VALUE'
-const ADD_USER = 'ADD USER'
+///productReducer : aakhane product related jei state gulo thakbe oi state gulo niye kaj korbe 
+
+///cartReducer : aaakhane cart related jei state gulo thakbe oi state gulo niye kaj korbe
 
 
-///define state----------------------
-const counterInitialState = {  /////akhane amra count nam aaa akta state create korechi and ai state take akta { } object ar moddhe rekhe diyechi and ai { } object take ami counterInitialState variable ar moddhe store kore diyechi amra chaile ai { } object ar moddhe multiple state oo create korte partam 
-    count: 0,
-    users: ['dip'],
-    totalUsers: 1,
+///////-----product Reducer-------//////
+// constent
+const GET_PRODUCT = 'GET_PRODUCT'
+const ADD_PRODUCT = 'ADD_PRODUCT'
+
+//state 
+const initialProductState = {  //////akhane amra state create korchi 2ta tai oi state guloke akta object { } ar moddhe rekhechi and ai object { } take ami initialProductState ai variable ar moddhe store kore diyechi..ami chile joto khusi toto state ai object { } ar moddhe define kore dite pari
+    products:["shoes","shart"],
+    countProducts:2
 }
 
-///action define-------------------------
-const countIncrement = () => {   ////akhane amader action ke akta function ar moddhe rekhechi tai ai function ke bole action creator function...and action ar moddhe akta object { } thake and ai { } object ar moddhe amra 2 ta jinish niye kaj kori "type" ai  type ar moddhe amra bole dei amader action ar type ta ki hobe and "payload" ai payload ar maddhome amra action ar moddhe theke Reduser ar moddhe data pass kori and amader ai { } action ke ai countIncrement function ar moddhe rekhechi tai ai function ke bola hobe Action Creator Function
-    return {
-        type: INCREMENT,
+//action
+const getProduct = () => {   /////jehetu amder action take akta function ar moddhe rekhe return korchi tai ai getProduct function take bola hobe Action Creator Function.....amra jani amader action { } object ar moddhe lekha hoy and action ar moddhe 2ta jinish thake 'type' ai type ar moddhe amader action ar type  ta bole dei amader action type ta ki hobe and ai action  type ta amra akta variable ar moddhe define kore then oi variable ar nam ta akhene likhe dite hobe karon amader ai nam ta aabar amader Reduser ar moddhe likhe te hobe tai jeno amader speling mistek na hoy tar jonno amra amder action ar type ar nam ta akta variable ar moddhe store kore rakhbo and oi variable take use korbo and action ar moddhe 'payload' ooo thake and ai payload ar maddhome amra action ar moddhe theke Reducer ar moddhe data pass korte pari 
+    return{
+        type: GET_PRODUCT,
     }
 }
 
-const countDecrement = () => {
-    return {
-        type: DECREMENT,
+
+const addProduct = (DATA) => {  ////ai addProduct action ta jokhon eee dispatch hobe tokhon ee oikhan theke amra akta data pabo and oi data take amder DATA variable receive korbe and payload ar maddhome amder Reducer ar moddhe pass kore diyechi amader ai DATA variable ar moddhe jei value ta ashbe oi value take
+    return{
+        type: ADD_PRODUCT,
+        payload: DATA,
     }
 }
 
-const reset = () => {
-    return {
-        type: RESET,
+//Reducer
+const productReducer = (state=initialProductState , action) => {
+  ////===amra cahile ai switch na bebohar kore if else diye oo korte partam check GitHub ReactJs Basic repository useReducer() hook branch===///
+    switch (action.type) {
+        case GET_PRODUCT:
+            return{
+                ...state,   ////akhane amader state ar moddhe ja ja ache sob niye ashe dekhabe karon ami state ar sathe spared oparator use korechi ...state
+            }
+            
+        case ADD_PRODUCT:
+            return{                
+                products: [...state.products , action.payload], ////akhane ...state.products mane amader state ar moddhe jei products nam aa jei state ta ache oi state ar aager value ar sathe action ar payload theke jei data ta ashche  action.payload oi data ta amader ai products state ar sathe jog hoye jabe 
+                countProducts: state.countProducts + 1  ////akhane amder countProducts state ar value ar sathe 1 jog hoye jabe
+            }
+    
+        default:
+            return state;
+    }
+}
+////amra amader 2 ta reducer ar jonno akta eee store use korbo jei ta amra niche korechi
+//store
+// const { createStore } = require("redux")
+
+// const store = createStore(productReducer)
+
+// store.subscribe(()=> {
+//     console.log(store.getState())
+// })
+
+// store.dispatch(getProduct())
+// store.dispatch(addProduct("blazzer"))
+
+
+///////-----Cart Reducer-------//////
+//constents
+const GET_CART = "GET_CART"
+const ADD_CART = "ADD_CART"
+
+
+//state
+const initialCartState = {
+    cart:["blazzer"],
+    totalCart:1,
+}
+
+//action
+const getCart = () => {
+    return{
+        type: GET_CART,
     }
 }
 
-const incrementCounterByValue = (value) => {  /////jokhon amader ai incrementCounterByValue action ta dispacth hobe tokhon oikhan theke amra akta data pabo and oi data ta amader value ar moddhe chole ashbe
-    return {
-        type: INCREMENT_BY_VALUE,
-        payload: value,  /////and ai value data take ami payload ar maddhome amader Reduser ar moddhe pass kore diyechi
-    }
-}
-
-const addUser = (Data) => {
-    return {
-        type: ADD_USER,
+const addCart = (Data) => {
+    return{
+        type: ADD_CART,
         payload: Data,
     }
 }
 
-
-///define Reducer-------------------------------
-const counterReducer = (state=counterInitialState , action) => { /////amader action gulo dispatch hoye action ar type oonujayi amaer Reduser state take update kore oi updated state take amader store ar moddhe pathiye debe
+//Reduser
+const cartReducer = (state=initialCartState , action) => {
     ////===amra cahile ai switch na bebohar kore if else diye oo korte partam check GitHub ReactJs Basic repository useReducer() hook branch===///
-      switch (action.type) {
-        case INCREMENT:
-           return {
-            ...state,  /////akhane amader state ar moddhe jei state gulo ache oigulo ke distructuring kore akhane niye ashbe karon ami akhane sprade operator use korechi
-            count : state.count + 1
-           }
-
-        case DECREMENT:
-            return {
-            ...state,
-            count : state.count - 1
-            }  
+    switch (action.type) {
+        case GET_CART:
+            return{
+                ...state
+            }
             
-        case RESET:
-            return {
-            ...state,
-            count : 0
-            }    
-
-        case INCREMENT_BY_VALUE:
-            return {
-            ...state,
-            count : state.count + action.payload, ////akhane action.payload ar moddhe amra amder data take pabo and oi data ar sathe state ar moddhe jei count state ta ache oi count state ar value ar sathe jog kore diyechi
-            }  
-            
-        case ADD_USER:
-            return {  
-            ...state,               
-            users : [ ...state.users, action.payload ], ////amader ADD_USER action ta dispatch  howar pore ai Reduser ar moddh ashebe akhane amader users state ar value ar sathe amader action ar payload theke jei datata ashche oi data ta add hoye jabe akhane ...state.users aita diye bola hocche amader state ar moddhu users nam aaa jei state ta ache oi state ar value ar sathe amader action ar payload ar moddhe theke jei datata ashche oi data ta akhane users state ar value ar sathe add hoye jabe and ...state aikhane ami sprade oparator use korechi mane amader users state ar moddhe jei privious value gulo ache ta akhane ar maddhome chole ashbe ...state.users and ar sathe amader action ar payload ar moddhe theke jei datata pacchi oi data ta add kore diyechi amader users state ar sathe
-            totalUsers: state.totalUsers + 1  /////and akhane amader tot
-            }    
-
-
+        case ADD_CART:
+            return{
+                cart: [...state.cart , action.payload],
+                totalCart: state.totalCart + 1
+            }
+    
         default:
-            state; ////jehetu amader Reducer ta hocche akta pure function tai ai function ta kichu na kichu return korbei tai jodi amder akta ooo action dispatch na hoy tahole oooo amader ai Reducear function ta state ar value take return korbe...karon Reduser hocche akta pure function and ai pure function ar kaj hocche kichu na kichu return kora
+            return state;
     }
 }
+///amra amader product Reducer and  Cart Reducer ar jonno akta eeee store create korchi
+//store
+const { createStore, combineReducers } = require("redux")  /////akhane amader redux javascript library ar moddhe theke createStore ke import korechi store create korar jonno and combineReducers ke import korechi amader 2ta reducer ke combine kora jonno
 
-////Store---------------------------
-
-const { createStore } = require('redux')   ////akhane amader 'redux javascript ar library' theke createStore take import korechi Store create korar jonno
-
-const store = createStore(counterReducer)  /////akhane amader createStore(counterReducer) createStore() akta store create korebe counterReducer function ar moddhe theke jei state ta updated hoye amader ai store ar moddhe ashbe tar jonno akta store create korbe and oi store ke store nam ar ai variable ar moddhe store kore debe
-
-store.subscribe(()=>{   /////akhane amader store variable ar sathe subscribe() method take call korechi jar fole amader store ta View ar moddhe update hoye jabe and amra dekhte pabo
-    console.log(store.getState())  ////akhane console.log kore amder state variable ar sathe getState() method take call kora hoyeche amader ai store variable ar moddhe theke state ar obochtha ta amader dekhabe ai getState() method ta
+const rootReducer = combineReducers({   ////akhane combineReducers() method take call kore tar moddhe akta object define kore diyechi and ai object ar moddhe 
+    productR: productReducer,    /////amader productReducer ke productR key ar moddhe store kore diyechi
+    cartR: cartReducer, ////amader cartReducer ke cartR key ar moddhe store kore diyechi
 })
 
-store.dispatch(countIncrement())  ///// and akhane ami amader store variable ar sathe dispatch() method ta likhechi and ai dispatch() method ar moddhe action likhe diyechi tai amader ai dispatch() method ta amader action guloke dispatch korbe jei action gulo amra amader dispatch() ar moddhe pass kore debo oi action guloke
-store.dispatch(countIncrement())
-store.dispatch(countIncrement())
-store.dispatch(countIncrement())
-store.dispatch(countDecrement())
-store.dispatch(reset())
-store.dispatch(incrementCounterByValue(5)) /////akhane amader incrementCounterByValue action take dispatch korechi and dispatch korar somoy ami 5 pass kore diyechi value hishebe
-store.dispatch(addUser('anik')) ////akhane amader addUser action take dispatch korechi and dispatch korar somoy amra akta string pass korechi ai string take amader ai  addUser action ta receive korbe
-store.dispatch(addUser('salma'))
+const Store = createStore(rootReducer)   //////akhane amra akta store create korechi createStore() method take call kore and tar moddhe amader rootReducer ke pass kore diyechi...amader rootReducer ar moddhe amra 2 ta reducers ke combine kore diyechi karon amra sorosori createStore() ar moddhe 2 ta Reducer ke akbare likhte parbo na tai amra ai 2ta Reducer ke combine kore rootReducer variable ar moddhe rekhe diyechi and oi variable take akhane pass kore diyechi
 
-///// if you don't understand this code please check README.md file
+Store.subscribe(()=> {  //////subscribe hocche amader store ar akta method jar maddhome amra amader store ar theke View ar moddhe amader update kore debe and amra dekhte pabo 
+    console.log(Store.getState())   /////getState() hocche amader store ar akta method  jar maddhome amader state ar obochtha dekhte pari akhane amra amader console ar moddhe state ar obochta ta dekhabe node index.jsx command ta chalale
+})
 
+Store.dispatch(getCart())   /////dispatch() hocche amader store ar r akta method jar maddhome amra amader kono action ke dispatch korte pari....and jokhon amder kono action dispatch hoy tokhon oita action ar moddhe jai and oi action ar type onujayi amader Reduser ar moddhe jabe and Reducer ar moddhe action type oonujayi jei kaj gulo kora ache oi kaj gulo korebe tar pore amder state ta update hoye store ar moddhe chole ashbe and ai store ar moddhe theke view ar moddhe update hoye jabe
+Store.dispatch(addProduct("blazzer"))

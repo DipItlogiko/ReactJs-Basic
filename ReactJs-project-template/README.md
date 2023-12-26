@@ -1,5 +1,4 @@
-# redux | payload([Tutorial](https://www.youtube.com/watch?v=7-Y96jM7xmg&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=80))
-
+# redux | Multiple reducers ([Tutorial](https://www.youtube.com/watch?v=MN3-kkwMgxQ&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=81))
 
 
 ## For Installing Redux on ReactJs Project
@@ -10,6 +9,7 @@
 kintu amra ai branch ar moddhe ReactJs project ar sathe Redux javascript library take use kori nai  amra shudhu Redux javascript library niye kaj korchi tai amra akhane ```npm install redux```command ta chaliye amader redux javascript library take install kore niyechi....
 
 
-Check(index.jsx and run node index.jsx)
+Check(index.jsx and run ```node index.jsx```)
+
 
  
