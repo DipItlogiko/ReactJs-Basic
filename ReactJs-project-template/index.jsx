@@ -7,11 +7,15 @@
 const INCREMENT = 'INCREMENT'   ///akhane ami constants create korechi mane akta variable ar moddhe akta string ke store kore rekhechi jeno amader speling mistake na hoy mane jeno amader banan vul na hoy tar jonno kokhon amra amader action ar moddhe type likhbo tokhon amader oonek somoy speling mistake hote pare tai oi type ar string take amra aivabe akta variable ar moddhe store kore rekhe tar pore ai variable take amader action ar type ar moddhe likhe debo
 const DECREMENT = 'DECREMENT'
 const RESET = 'RESET'
+const INCREMENT_BY_VALUE = 'INCREMENT BY VALUE'
+const ADD_USER = 'ADD USER'
 
 
 ///define state----------------------
 const counterInitialState = {  /////akhane amra count nam aaa akta state create korechi and ai state take akta { } object ar moddhe rekhe diyechi and ai { } object take ami counterInitialState variable ar moddhe store kore diyechi amra chaile ai { } object ar moddhe multiple state oo create korte partam 
     count: 0,
+    users: ['dip'],
+    totalUsers: 1,
 }
 
 ///action define-------------------------
@@ -33,13 +37,28 @@ const reset = () => {
     }
 }
 
+const incrementCounterByValue = (value) => {  /////jokhon amader ai incrementCounterByValue action ta dispacth hobe tokhon oikhan theke amra akta data pabo and oi data ta amader value ar moddhe chole ashbe
+    return {
+        type: INCREMENT_BY_VALUE,
+        payload: value,  /////and ai value data take ami payload ar maddhome amader Reduser ar moddhe pass kore diyechi
+    }
+}
+
+const addUser = (Data) => {
+    return {
+        type: ADD_USER,
+        payload: Data,
+    }
+}
+
+
 ///define Reducer-------------------------------
 const counterReducer = (state=counterInitialState , action) => { /////amader action gulo dispatch hoye action ar type oonujayi amaer Reduser state take update kore oi updated state take amader store ar moddhe pathiye debe
     ////===amra cahile ai switch na bebohar kore if else diye oo korte partam check GitHub ReactJs Basic repository useReducer() hook branch===///
       switch (action.type) {
         case INCREMENT:
            return {
-            ...state,
+            ...state,  /////akhane amader state ar moddhe jei state gulo ache oigulo ke distructuring kore akhane niye ashbe karon ami akhane sprade operator use korechi
             count : state.count + 1
            }
 
@@ -54,6 +73,20 @@ const counterReducer = (state=counterInitialState , action) => { /////amader act
             ...state,
             count : 0
             }    
+
+        case INCREMENT_BY_VALUE:
+            return {
+            ...state,
+            count : state.count + action.payload, ////akhane action.payload ar moddhe amra amder data take pabo and oi data ar sathe state ar moddhe jei count state ta ache oi count state ar value ar sathe jog kore diyechi
+            }  
+            
+        case ADD_USER:
+            return {  
+            ...state,               
+            users : [ ...state.users, action.payload ], ////amader ADD_USER action ta dispatch  howar pore ai Reduser ar moddh ashebe akhane amader users state ar value ar sathe amader action ar payload theke jei datata ashche oi data ta add hoye jabe akhane ...state.users aita diye bola hocche amader state ar moddhu users nam aaa jei state ta ache oi state ar value ar sathe amader action ar payload ar moddhe theke jei datata ashche oi data ta akhane users state ar value ar sathe add hoye jabe and ...state aikhane ami sprade oparator use korechi mane amader users state ar moddhe jei privious value gulo ache ta akhane ar maddhome chole ashbe ...state.users and ar sathe amader action ar payload ar moddhe theke jei datata pacchi oi data ta add kore diyechi amader users state ar sathe
+            totalUsers: state.totalUsers + 1  /////and akhane amader tot
+            }    
+
 
         default:
             state; ////jehetu amader Reducer ta hocche akta pure function tai ai function ta kichu na kichu return korbei tai jodi amder akta ooo action dispatch na hoy tahole oooo amader ai Reducear function ta state ar value take return korbe...karon Reduser hocche akta pure function and ai pure function ar kaj hocche kichu na kichu return kora
@@ -76,7 +109,9 @@ store.dispatch(countIncrement())
 store.dispatch(countIncrement())
 store.dispatch(countDecrement())
 store.dispatch(reset())
-
+store.dispatch(incrementCounterByValue(5)) /////akhane amader incrementCounterByValue action take dispatch korechi and dispatch korar somoy ami 5 pass kore diyechi value hishebe
+store.dispatch(addUser('anik')) ////akhane amader addUser action take dispatch korechi and dispatch korar somoy amra akta string pass korechi ai string take amader ai  addUser action ta receive korbe
+store.dispatch(addUser('salma'))
 
 ///// if you don't understand this code please check README.md file
 
