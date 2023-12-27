@@ -1,0 +1,7 @@
+import { createStore } from "redux"   /////akhane amader createStore method take import korechi redux javascript library theke store create korar jonno
+
+import counterReducer from "./services/reducers/CounterReducer"
+
+const Store = createStore(counterReducer)  /////amra jani amader kono action dispatch howar pore oi action ar type oonujayi amader Reduser ar moddhe jabe and Reducer ar modddhe theke amader action ar type oonujayi logic handel kore state ar value ta update hoye amader store ar moddhe chole ashbe tai amader counterReducer ar moddhe theke jei updated state ar value ta ashbe oi value ar jonno amra akta store create korechi redux ar createStore method take call kore and oitake Store variable ar moddhe sote kore diyechi
+
+export default Store  ////akhane amader Store variable take export kore diyechi tai amra ai store take jekono file theke import korte parbo..and jehetu ami ai Store variable take export default korechi tai amader ai variable take import korar somoy { } object ar moddhe rakhar dorkar nei jodi amra akhan theke amader ai Store variable take shudhu export kortam tahole amader oonno file theke ai Store variable take import korar somoy ai Store variable take { } object ar moddhe rakhte hoto

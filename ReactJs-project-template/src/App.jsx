@@ -1,9 +1,12 @@
 import React from "react"
 
+import Counter from "./components/Counter"
+
 function App(){
     return(
-        <div>
-            amra ai App.jsx ar moddhe theke shudhu route guloke access korbo ta chara r kichur kaj korbo na
+        <div style={{ textAlign: 'center' }}>
+            <h1>Hello Dip</h1>
+            <Counter />
         </div>
     )
 }
