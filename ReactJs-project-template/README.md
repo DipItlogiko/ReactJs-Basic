@@ -1,4 +1,4 @@
-# redux | Middleware | redux-logger ([Tutorial](https://www.youtube.com/watch?v=dk42KOFcRkk&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=82))
+# redux | fetch data using redux-thunk ([Tutorial](https://www.youtube.com/watch?v=ppug0jE3poY&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=83))
 
 
 ## For Installing Redux on ReactJs Project
@@ -18,13 +18,13 @@ jemon dhora jak amra login credential check korte chacchi ba API calling korte c
 
 middleware ta muloto darowan ar moto kaj kore...jemon ta amra LARAVEL shekhar somoy jenechilam
 
-### redux-logger Middleware
+### redux-thunk Middleware
 
-redux-logger hocche popular akta Middleware...
+```redux-thunk ```hocche akta middleware
 
-for install this redux-logger middleware run this command ```npm i redux-logger```
+for install this redux-thunk middleware run this command ```npm i redux-thunk```
 
-**ai redux-logger Middleware ta amader previous state ki chilo ,kon action hoyeche, next state ta dekhabe and action ta kokhon hoyechilo oi time ta dekhabe...**
+**redux-thunk Middleware ar maddhome amra asyncronous action create korte pari and oi action ar moddhe API theke data fetching ar kaj korte pari asyncronous vabe** 
 
 
 Check(index.jsx and run ```node index.jsx```)
