@@ -1,14 +1,14 @@
 import React from "react"
 
-import Todos from "./components/Todos"
+import CounterView from "./freature/counter/CounterView"
  
 
 function App(){
     return(
         <div style={{ textAlign: 'center' }}>
-            <h1>React-redux</h1>
+            <h1>react-reduxToolkit</h1>
 
-            <Todos />
+            <CounterView />
              
         </div>
     )

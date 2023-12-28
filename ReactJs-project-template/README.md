@@ -1,14 +1,18 @@
-# react-redux | fetch data([Tutorial](https://www.youtube.com/watch?v=ToS6afYzyhE&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=85))
+# Counter app using redux toolkit ([Tutorial](https://www.youtube.com/watch?v=1aOGY0rRBQk&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=86))
 
 
-**ai branch ar moddhe amra amader ReactJs Project ar sathe Redux javascript library ta use korechi and dekhechi ki vabe redux ar maddhome API theke data fetch kore ReactJs ar moddhe use korte hoy**
+**ai branch ar moddhe amra amader ReactJs Project ar sathe Redux javascript library ar toolkit use kore Counter App create korechi**
 
 jemon ta amra Redux ar intoduction ar moddhe jenechilam Redux hocche akta javascript library and ai Redux javascript library ar uddesho hocche amder state ke global eee manage kora...amra ReactJs ar small project ar khettre Redux javascript library ta use korbo na amader ReactJs project ar sathe tokhon amra chaile amader ReactJs  ar builtin ```useContext``` hook ta use kore amader state ba variable ar value take publically set kore dite pari and  ```useReducer``` Hook ta use kore amder oonek gulo state ke akta state ar moddhe rekhe handel korte pari.....**For More information about Redux Check('redux|Introduction_to_redux' Branch)**
 
 
-## INSTALLATION
+## INSTALLATION 
 
-* Redux a kaj hoy muloto jokhon kono action dispatch hoy tokhon oi action ar type oonujai oi action ta amder Reducer ar moddhe jai and Reducer ar moddhe theke sob logic handel korar pore amder state ta update hoye store ar moddhe chole ashe and ai store ta amder View ke update kore dei and ai store ta amder ReactJs project ar moddhe create korar jonno amader prothom aaa Redux ta install korte hobe amader ReactJs porject ar moddhe ai  command ta chaliye  ```npm install redux``` karon amader store create korte hole amader createStore method ta lagbe and ai method ta amader Redux package ar moddhe ache...and store create kora hoye gele amader ReactRedux package ta install korte hobe ai command ar maddhome ```npm install react-redux``` jar fole amra amader redux javascript library ke ReactJs parject ar sathe connect kore dite parbo....
+* for installing ```Redux toolkit``` into ```ReactJs project``` run the following command: ```npm install @reduxjs/toolkit react-redux``` or go to the ReduxToolkit official website([Link](https://redux-toolkit.js.org/tutorials/quick-start#usage-summary)) and ai react-redux package ar kaj hocche amader Redux javascript library ar sathe amader ReactJs project ke conneted kore dewa
+
+## IMPORTANT
+
+Redux toolkit use korar somoy amader kichu folder structure follow korte hobe jemon jemon src ar moddhe amader app nam aa akta folder ba directory create korte hobe and src ar moddhe freature nam aa r akta directory create korbo  and ai freature ar moddhe amra amader ReactJs ar Protita freature ke alada alada kore rakhte parbo....and freature directory ar moddhe amara jei directory gulo create korbo oi directory ar moddhe jei file gulo create korbo oi file ar nam ar sathe ```Slice``` ta add kore dite hobe jemon counterSlice.jsx ai  ```Slice``` ke Redux ar vasai kono akta freature ar  collection of logic kei ```Slice``` bola hoy...jemon amra  Redux korechilam tokhon amra amader action ar type oonujayi oi action guloke Reducer ar moddhe pass kortam and Reducer amader action ar type oonujayi logic handel kore state take update kore store ar moddhe pass kore dito and store amader View take updated kore dito updated state diye and amra dekhte partam...and oi Reducer ar kaj tai amra amder counterSlice.jsx mane Slice jukto file ar moddhe likhbo...and src ar moddhe amra jei app directory ta create korbo tar moddhe amader store.jsx file ta create kore or moddhe store ar kaj korbo....jemon ta amra jani Redux jevabe kaj kore jemon jodi kono action dispatch hoy tahole oi action ar type ar opore vitti kore amader oi action ta Reducer ar moddhe chole jabe and Reducer amader oi action ar type ar opore vitti kore logic handel kore amader state take update kore Store aaa pass kore dei and amader Store ta updated state ar value diye amader View ke Update kore dei and amra View ar moddhe amader updated state ar value take dekhte pari  
 
 
-Check(```src/App.jsx``` and ```src/services/actions/TodosAction.jsx``` and ```src/services/constants/TodosConstant.jsx``` and ```src/services/reducers/TodosReducer.jsx``` and  ```src/store.jsx``` and ```src/main.jsx``` and ```src/components/Todos.jsx```)
+Check(```src/App.jsx``` and ```src/freature/counter/counterSlice.jsx``` and ```src/app/store.jsx``` and ```src/main.jsx``` and  ```src/App.jsx``` and  ```src/freature/counter/CounterView.jsx```)
