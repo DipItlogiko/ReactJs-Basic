@@ -1,3 +1,0 @@
-export const INCREMENT = 'INCREMENT'    /////akhane amader action ar type guloke akta variable ar moddhe store kore rekhechi karon amader ai action ar nam guloke amader action and Reducer ar moddhe likhte hobe tai jeno amader speling mistake na hoy tar jonno amra amader action ar type ar nam gulo aivabe akta variable ar moddhe store kore rekhe diyechi....and jehetu ami akhane theke  amader protita variable ke shudhu export korechi tai jokhon ami oonnoo kono file ar moddhe  ai variable guloke import korbo tokhon oobossoi amader oi variable guloke { } object ar moddhe rakhte hobe karon ami ai variable guloke shudhu export korechi tai 
-export const DECREMENT = 'DECREMENT'
-export const RESET = 'RESET'

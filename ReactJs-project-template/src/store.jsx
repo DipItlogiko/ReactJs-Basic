@@ -1,7 +1,9 @@
-import { createStore } from "redux"   /////akhane amader createStore method take import korechi redux javascript library theke store create korar jonno
+import { createStore , applyMiddleware } from 'redux' ////akhane redux javascript library ar moddhe theke createStore method take import korechi store create korar jonno and applyMiddleware take import korchi amader store ar moddhe Middleware use korar jonno
+import {thunk} from 'redux-thunk' /////aakhane amader ReactJs project ar moddhe amra ai redux-thunk middleware ta install korechi and ai redux-thunk Middleware ar maddhome amra asyncronous action create korte pari and oi action ar moddhe API theke data fetching ar kaj korte pari asyncronous vabe
 
-import counterReducer from "./services/reducers/CounterReducer"
+import todosReduser from './services/reducers/TodosReducer'
 
-const Store = createStore(counterReducer)  /////amra jani amader kono action dispatch howar pore oi action ar type oonujayi amader Reduser ar moddhe jabe and Reducer ar modddhe theke amader action ar type oonujayi logic handel kore state ar value ta update hoye amader store ar moddhe chole ashbe tai amader counterReducer ar moddhe theke jei updated state ar value ta ashbe oi value ar jonno amra akta store create korechi redux ar createStore method take call kore and oitake Store variable ar moddhe sote kore diyechi
 
-export default Store  ////akhane amader Store variable take export kore diyechi tai amra ai store take jekono file theke import korte parbo..and jehetu ami ai Store variable take export default korechi tai amader ai variable take import korar somoy { } object ar moddhe rakhar dorkar nei jodi amra akhan theke amader ai Store variable take shudhu export kortam tahole amader oonno file theke ai Store variable take import korar somoy ai Store variable take { } object ar moddhe rakhte hoto
+const Store = createStore(todosReduser , applyMiddleware(thunk)) /////amra jani amader kono action dispatch howar pore oi action ar type oonujayi amader Reduser ar moddhe jabe and Reducer ar modddhe theke amader action ar type oonujayi logic handel kore state ar value ta update hoye amader store ar moddhe chole ashbe tai amader todosReduser ar moddhe theke jei updated state ar value ta ashbe oi value ar jonno amra akta store create korechi redux ar createStore method take call kore and oitake Store variable ar moddhe sote kore diyechi....amader ai createStore() method ta 2ta jinish  accept kore Reducer and middleware .....and kono middleware use korte hole oi middleware take amader applyMiddleware ar moddhe rakhte hobe 
+
+export default Store

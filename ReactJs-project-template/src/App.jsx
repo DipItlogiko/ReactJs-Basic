@@ -1,12 +1,15 @@
 import React from "react"
 
-import Counter from "./components/Counter"
+import Todos from "./components/Todos"
+ 
 
 function App(){
     return(
         <div style={{ textAlign: 'center' }}>
-            <h1>Hello Dip</h1>
-            <Counter />
+            <h1>React-redux</h1>
+
+            <Todos />
+             
         </div>
     )
 }
