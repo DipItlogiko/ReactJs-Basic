@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit" ////amader ai ReactJs project ar moddhe amra jei Redux toolkit package ta install korechi oi Redux toolkit ar moddhe theke amra configureStore method take import korchi
 
-import postReducer from "../freatures/post/postSlice" ////akhane amader postSlice.jsx file ar moddhe theke ami amader postSlice take import korechi and jehetu amader postSlice.jsx file ar moddhe theke ami amader postSlice take import korechi and jehetu amader postSlice ke export default korechi tai akhane ami oitake je kono nam aaa  import korte parbo tai ami akhane postReducer ai nam aa import korechi
+import BooksReduser from "../freatures/books/BooksSlice" ////akhane amader BooksSlice.jsx file ar moddhe theke ami amader booksSlice take import korechi and jehetu amader BooksSlice.jsx file ar moddhe theke ami amader booksSlice take import korechi and jehetu amader booksSlice ke export default korechi tai akhane ami oitake je kono nam aaa  import korte parbo tai ami akhane BooksReduser ai nam aa import korechi
 
-const Store = configureStore({  /////ai configureStore() method ar moddhe amra amader reducer guloke akta object ar moddhe rekhe dite pari .....jokhon amra ai store ar kaj ta amader Redux ar moddhe kortam tokhon amra Redux ar moddhe theke createStore() method take call kore tar moddhe amader Reducer ar nam ta likhe ditam and amra chaile tar moddhe middleware ooo likhte partam applyMiddleware() ar moddhe amder middleware ar nam ta likhe ditam kintu Redux toolkit ar moddhe amra configureStore ai method ar moddhe ai kaj gulo kori
+const Store = configureStore({  /////ai configureStore() method ar moddhe amra amader reducer guloke akta object ar moddhe rekhe dite pari .....jokhon amra ai store ar kaj ta amader shudhu ReactJs and Redux use kore kortam tokhon amra Redux ar moddhe theke createStore() method take call kore tar moddhe amader Reducer ar nam ta likhe ditam and amra chaile tar moddhe middleware ooo likhte partam applyMiddleware() ar moddhe amder middleware ar nam ta likhe ditam kintu Redux toolkit ar moddhe amra configureStore ai method ar moddhe ai kaj gulo kori
     reducer: { /////amader sob reducer guloke amra ai reducer object ar moddhe rekhe dite pari
-        posts: postReducer  ////akhane amader postReducer ke posts key ar moddhe store kore diyechi ...and amra chaile amader r ooo reducer ke amra ai object { } ar moddhe key pair aaa set kore dite pari
+        Allbooks: BooksReduser  ////akhane amader BooksReduser ke books key ar moddhe store kore diyechi ...and amra chaile amader r ooo reducer ke amra ai object { } ar moddhe key pair aaa set kore dite pari
     }
 })
 

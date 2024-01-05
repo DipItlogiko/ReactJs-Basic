@@ -8,6 +8,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 <Provider store={Store}> {/* akhane Provider dara rap kore amader store variable ar moddhe Store take set kore diyechi golobally tai amader main.jsx ar sob child gulo amader ai Store ar value gulo access korte parbe */}
    <App /> 
-</Provider>
+</Provider> 
 
 )
