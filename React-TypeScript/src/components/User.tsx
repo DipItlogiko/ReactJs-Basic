@@ -32,35 +32,58 @@
 
 
 /////======= UserDefined PropsType Example with Object =========//////
-import React from "react"
+// import React from "react"
 
-type UserProps = {    //////akhane amader App.tsx component ar moddhe theke jei object take  pass korechi user key ar moddhe amader ai User.tsx component ar moddhe oi object take ami akhane  UserProps ar moddhe receive korechi user hocche amader key ar nam jei key ar moddhe amader object take pass korechi amader App.tsx ar moddhe theke
-    user: {
-        name: string;  ////amader user key ar moddhe jei object ta pass korechi amader App.tsx ar moddhe theke oi object ar moddhe key ar moddhe jei data gulo ache oi data gulor dataType ba propsType gulo ami akhane set kore diyechi and ai dataType ba PropsType bade jodi oonno kono data pass kora hoy amader object ar key ar moddhe App.tsx ar moddhe theke tahole error dekhabe
-        age: number;
-        isRegistered: boolean;
-        lang: string[];
-    }
+// type UserProps = {    //////akhane amader App.tsx component ar moddhe theke jei object take  pass korechi user key ar moddhe amader ai User.tsx component ar moddhe oi object take ami akhane  UserProps ar moddhe receive korechi user hocche amader key ar nam jei key ar moddhe amader object take pass korechi amader App.tsx ar moddhe theke
+//     user: {
+//         name: string;  ////amader user key ar moddhe jei object ta pass korechi amader App.tsx ar moddhe theke oi object ar moddhe key ar moddhe jei data gulo ache oi data gulor dataType ba propsType gulo ami akhane set kore diyechi and ai dataType ba PropsType bade jodi oonno kono data pass kora hoy amader object ar key ar moddhe App.tsx ar moddhe theke tahole error dekhabe
+//         age: number;
+//         isRegistered: boolean;
+//         lang: string[];
+//     }
     
-}
+// }
 
-function User({ user }: UserProps) {   /////akhane amader UserProps ar moddhe jei object ta ache oi object ar moddhe theke ami name,age,isRegistered ai 3 ta ke distructuring kore ber kore niye ashechi jar fole amader rrr UserProps.name  UserProps.age ai vabe likhte hobe na sora sori name , age aivabe likhte parbo and jehetu UserProps ar moddhe amader object aakare data ache tai amra distructuring korar somoy { } curly braces ar moddhe rekhechi jodi amder UserProps ar moddhe [ ] array akare data thakto tahole amader distructuring korar somoy [ ] ar moddhe rakhte hoto amader key ar nam gulo
-    return(
-        <div style={{ border: "1px solid", margin: "0.5rem" }}>
-            <h2>Users Management</h2>
+// function User({ user }: UserProps) {   /////akhane amader UserProps ar moddhe jei object ta ache oi object ar moddhe theke ami name,age,isRegistered ai 3 ta ke distructuring kore ber kore niye ashechi jar fole amader rrr UserProps.name  UserProps.age ai vabe likhte hobe na sora sori name , age aivabe likhte parbo and jehetu UserProps ar moddhe amader object aakare data ache tai amra distructuring korar somoy { } curly braces ar moddhe rekhechi jodi amder UserProps ar moddhe [ ] array akare data thakto tahole amader distructuring korar somoy [ ] ar moddhe rakhte hoto amader key ar nam gulo
+//     return(
+//         <div style={{ border: "1px solid", margin: "0.5rem" }}>
+//             <h2>Users Management</h2>
 
-            <h3>{ user.name }</h3>
-            <p>{ user.age } years old</p>
-            {user.isRegistered ? <p>Registered User</p> : <p>Unregistered User</p>} {/* akhane ternary operator use korechi amader user ar moddhe jei isRegistered ta ache jodi amder isRegistered ar value ta true hoy tahole amader Registered User print korbe and jodi amder isRegistered ar value ta false hoy tahole amader Unregistered User aita print korbe ...tarnary operator mane hocche jei operator ar 3 ta part thake */}
+//             <h3>{ user.name }</h3>
+//             <p>{ user.age } years old</p>
+//             {user.isRegistered ? <p>Registered User</p> : <p>Unregistered User</p>} {/* akhane ternary operator use korechi amader user ar moddhe jei isRegistered ta ache jodi amder isRegistered ar value ta true hoy tahole amader Registered User print korbe and jodi amder isRegistered ar value ta false hoy tahole amader Unregistered User aita print korbe ...tarnary operator mane hocche jei operator ar 3 ta part thake */}
 
-            <p>Speaks:
-                {user.lang.map((language, index)=> <span key={index}> {language} </span>)} {/*akhane user ar moddhe jei  lang ta ache oi lang ar moddhe theke akta akta kore language amader language ar moddhe ashbe and protibar amder span ar moddhe giye print hobe and amader protita language ke unique korar jonno amra array ar index take use korechi and span ar moddhe key={index} diye bole diyechi amder array ar index number onujayi amader portita language ke unique korbe */}
-            </p>
+//             <p>Speaks:
+//                 {user.lang.map((language, index)=> <span key={index}> {language} </span>)} {/*akhane user ar moddhe jei  lang ta ache oi lang ar moddhe theke akta akta kore language amader language ar moddhe ashbe and protibar amder span ar moddhe giye print hobe and amader protita language ke unique korar jonno amra array ar index take use korechi and span ar moddhe key={index} diye bole diyechi amder array ar index number onujayi amader portita language ke unique korbe */}
+//             </p>
            
            
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vero quisquam quod, ex esse possimus at placeat architecto nobis dolorem.</p>
-        </div>
-    )
-}
+//             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vero quisquam quod, ex esse possimus at placeat architecto nobis dolorem.</p>
+//         </div>
+//     )
+// }
+
+// export default User
+
+
+/////======= UserDefined PropsType Example with Union =========//////
+import React from "react";
+
+type DataFetchProps = { status : "loading" | "error" | "success";  };    //////akhane amader App.tsx component ar moddhe theke jei string take  pass korechi status key ar moddhe amader ai User.tsx component ar moddhe oi string take ami akhane  DataFetchProps ar moddhe receive korechi status hocche amader key ar nam jei key ar moddhe amader string take pass korechi amader App.tsx ar moddhe theke theke and ai status key ar moddhe "|" aita mane Union diye bole diyechi amader status key ar moddhe shudhu ai loading, error , success ai 3 tar jekono akta ashte hobe jodi amra ai 3 ta chara onno kichu amader App.tsx component ar moddhe theke pass kori tahole kaj hobe na and amader App.tsx ar moddhe error dekhabe status ar niche and union mane hocche ar moddhe je kono akta holei hobe
+  
+
+function User( {status} : DataFetchProps) {   /////akhane amader DataFetchProps ar moddhe jei status ta ache oi status take ami distructuring kore ber kore niye ashechi DataFetchProps ar moddhe theke
+        
+    if(status ==="loading") {
+        return  <h2>Data is loading...</h2>
+    
+    }else if(status ==="error"){
+        return  <h2>Error. Data could not fetched</h2>
+    
+    }else if(status ==="success"){
+        return <h2>Data fetched Successfully</h2>
+    }
+
+} 
 
 export default User
