@@ -1,16 +1,16 @@
 import React from "react";
 
-import Button from "./components/Button";
-import Post from "./components/Post";
+import ButtonStyle from "./components/ButtonStyle";
+
+const customStyle = { color : "green" , backgroundColor : "yellow"}
 
 function App() {
   return(
     <div style={{ textAlign: "center" }}>
-     <h1>children props</h1>
+     <h1>style props</h1>  
 
-     <Button>Click me</Button>  {/* akhane amader Button Component take call kore tar moddhe Click me string take pass kore diyechi and ai Click me string take amder Button component ta Children Props aakare receive korbe*/}
-     <Post /> {/* akhane Post Component take Call kora hoyeche */}
-
+     <ButtonStyle myStyle={{ color: "Red" }} /> {/* akhane amader ButtonStyle component take call kore myStyle key ar moddhe akta style pass kore diyechi props aakare amader ButtonStyle component ar moddhe */}   
+     <ButtonStyle myStyle={ customStyle } /> {/* akhane ami ButtonStyle component take call kore myStyle key ar moddhe amader customStyle variable take pass kore diiyechi and ai customStyle variable ar moddhe amder kichu styling kora ache */}
     </div>
   )
 }
