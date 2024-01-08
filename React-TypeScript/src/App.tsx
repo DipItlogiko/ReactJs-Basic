@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import NewUser from "./components/NewUser";
+import Counter from './components/Counter';
 
 function App() {
   return(
-    <div style={{ textAlign: 'center' }}>
-      <h1>Form Event Type</h1>
+    <div style={{ textAlign : "center" }}>
+      <h1>Typing useReducer Hook</h1>
 
-      <NewUser /> {/* akhane amader NewUser.tsx component take call kora hoyeche*/}
+      <Counter />  {/* akhane amader Counter.tsx component ke call kora hoyeche */}
     </div>
   )
 }
