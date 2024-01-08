@@ -1,9 +1,11 @@
-# React-TypeScript|typing_useReducer_hook ([Tutorial](https://www.youtube.com/watch?v=ecAoCfZ91Lc&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=100))
+# React-TypeScript | Todo App Project ([Tutorial](https://www.youtube.com/watch?v=Tu7wnSzQifA&list=PLgH5QX0i9K3rGtitufynBKMy5gAFpa1y8&index=101))
  
-amra ReactJs project ar moddhe TypeScript use kore jodi useReducer hook ta use korte chai tahole oi useReducer hook ar type ta ki vabe set korte hoy ta ai branch ar moddhe kore dekhano hoyeche.....jokhon amader ak ee type ar oonek gulo state thakbe and oi state gulo jodi akta rr akta ar sathe interRelated hoy tahole amra useReducer hook ta use kore oi oonek gulo state ke akta state ar moddhe aane manage korte pari....jodi amader 5 ta ba 7 ta state thake tahole amra oi khhetre useReducer hook ta use korte pari kintu jodi amader 3 ta ba 4 ta state thake tahole amra useReducer hook ta use korbo na
- 
-Note: jokhon amra ReactJs project ar moddhe TypeScript use korbo tokhon amader Component ar file gulor seshe .tsx extension ta add kore dite hobe tsx mane hocche **Type Script Xml** 
+amder ai branch ar moddhe ReactJs project ar sathe TypeScript use kore akta Todo App Project kora hoyeche....and ai project ar moddhe dekhano hoyechi ki vabe amader type gulo aalada akta file ar moddhe rekhe oi type gulo ki vabe import kore use korte hoy amader oonno file gulor moddhe khub easyly and amder onChange,onClick,onSubmit ai event guloke ki vabe typing korte hoy TypeScript ar maddhome ta oo dekhano hoyeche......
 
-Check (```src/App.tsx``` and ```src/components/Counter.tsx```)
+**ReactJs project ar moddhe jokhon amra TypeScript use kori amra muloto ReactJs ar code eee likhi and tar sathe amra extra Type ba static Type ta add kore dei TypeScript ar sahajje...**TypeScript ReactJs ar sathe use korar  oonek shuvida ache check **React-TypeScript|Introduction|Environment** branch
+ 
+Note: jokhon amra ReactJs project ar moddhe TypeScript use korbo tokhon amader Component ar file gulor seshe .tsx extension ta add kore dite hobe tsx mane hocche **Type Script Xml** and amra amader project ar moddhe jei file ar moddhe amder sob type gulo rakhbo oi file ar seshe ```.ts``` extention ta add korte hobe
+
+Check (```src/App.tsx``` and ```src/components/Todos.tsx``` and ```src/components/Todo.tsx``` and ```src/components/AddTodo.tsx``` and ```src/types.ts```)
 
  
