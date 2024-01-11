@@ -11,7 +11,9 @@
 
 * **INSTALL PROCESS**
 
-  * ```React-redux``` ai package ta install kore amra ReactJs project ar moddhe redux ar kaj korte pari
+  * ```React-redux``` ai package ta install kore amra ReactJs project ar moddhe redux ke connect korte pari and
+
+  *  ```Redux``` ai package ta install korar pore amra ReactJs project ar moddhe Redux use korte parbo 
 
 * **IMPORTANT THINGS**
 
